@@ -34,14 +34,3 @@ def raise_unprocessable(field: str, value: str, hint: str = "") -> None:
     if hint:
         msg += f" {hint}"
     raise HTTPException(status_code=422, detail=msg)
-
-
-def build_error_detail(endpoint: str, message: str) -> dict:
-    """
-    Builds a simple error dict we can log or return.
-    Useful when you want structured error info without raising right away.
-    """
-    return {
-        "endpoint": endpoint,
-        "error": message,
-    }

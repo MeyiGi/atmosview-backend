@@ -2,22 +2,15 @@ import io
 from datetime import datetime
 
 import matplotlib
-matplotlib.use("Agg")  # non-interactive backend; avoids "no display" issues on servers
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import numpy as np
 
 from app.core.config import settings
 
-
-# I don't know matplotlib on high level so I made that part with using AI
-
 class VisualizationService:
-    """
-    Turns raw arrays into PNG bytes.
-
-    This stays intentionally dumb: it shouldn't know about GRIB files or HTTP.
-    """
+    """Turns raw arrays into PNG bytes."""
     _COLORMAPS = {
         "temperature": "RdYlBu_r",
         "pressure": "viridis",

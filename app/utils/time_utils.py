@@ -27,33 +27,3 @@ def parse_iso_datetime(time_str: str) -> datetime | None:
         return datetime.fromisoformat(cleaned)
     except ValueError:
         return None
-
-
-def format_datetime_for_display(dt: datetime) -> str:
-    """
-    Just a consistent way to print datetimes in logs/responses.
-    e.g. "2025-01-29 00:00 UTC"
-    """
-    return dt.strftime("%Y-%m-%d %H:%M UTC")
-
-
-def find_closest_time(target: datetime, available_times: list[datetime]) -> datetime | None:
-    """
-    Given a list of available datetimes, return the one closest to `target`.
-    Returns None if the list is empty (no point crashing over that).
-
-    I use this when the user's requested time doesn't exactly match a GRIB step.
-    """
-    if not available_times:
-        return None
-
-    # min() with a key is cleaner than sorting the whole list
-    closest = min(available_times, key=lambda t: abs((t - target).total_seconds()))
-    return closest
-
-
-def seconds_between(dt1: datetime, dt2: datetime) -> float:
-    """
-    Returns absolute difference in seconds between two datetimes.
-    """
-    return abs((dt1 - dt2).total_seconds())

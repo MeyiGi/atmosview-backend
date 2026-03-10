@@ -2,15 +2,14 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.wrf_api import router as wrf_router
+
 
 from app.core.config import settings
 from app.core.database import engine
 from app.models import request_log
 from app.routes.routes import router
 
-# Lifespan handler so we can do a bit of startup setup.
-# (Yeah, in real life you'd likely use Alembic migrations instead of create_all,
-# but for this small service it's fine.)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Create DB tables on boot. If this ever becomes "real prod", revisit this.
@@ -34,3 +33,4 @@ app.add_middleware(
 
 # route registration
 app.include_router(router)
+app.include_router(wrf_router)

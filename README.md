@@ -17,7 +17,7 @@ This service exposes temperature and atmospheric pressure fields from GRIB2 file
 Make sure you have [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/) installed.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/MeyiGi/central-asia-weather-api.git
 cd backend
 docker compose up --build
 ```
@@ -43,8 +43,8 @@ brew install eccodes
 **2. Create a virtual environment and install Python packages**
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate      # Windows: .venv\Scripts\activate
+python -m venv venv
+source venv/bin/activate      # Windows: .venv\Scripts\activate
 
 pip install -r requirements.txt
 ```
