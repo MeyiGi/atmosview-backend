@@ -10,6 +10,7 @@ from abc import ABC, abstractmethod
 from datetime import datetime
 
 from app.domain.entities import BoundingBox, WeatherGrid, WrfMeta
+from .entities import VariableSpec
 
 
 # ---------------------------------------------------------------------------
@@ -121,3 +122,9 @@ class DataCache(ABC):
 
     @abstractmethod
     def clear(self) -> None: ...
+
+
+# ---------------------------------------------------------------------------
+# VariableSpec port
+# ---------------------------------------------------------------------------
+

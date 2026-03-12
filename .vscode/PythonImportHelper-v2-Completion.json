@@ -1,5 +1,293 @@
 [
     {
+        "label": "VariableSpecBuilder",
+        "importPath": "app.application.variable_specs.builder",
+        "description": "app.application.variable_specs.builder",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.builder",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpecBuilder",
+        "importPath": "app.application.variable_specs.builder",
+        "description": "app.application.variable_specs.builder",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.builder",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpecBuilder",
+        "importPath": "app.application.variable_specs.builder",
+        "description": "app.application.variable_specs.builder",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.builder",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpec",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpec",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpec",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpec",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherGrid",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WrfMeta",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpec",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherGrid",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherGrid",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherGrid",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WrfMeta",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "TemperatureBuilder",
+        "importPath": "app.application.variable_specs.implementations.temperature_builder",
+        "description": "app.application.variable_specs.implementations.temperature_builder",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.implementations.temperature_builder",
+        "documentation": {}
+    },
+    {
+        "label": "PressureBuilder",
+        "importPath": "app.application.variable_specs.implementations.pressure_builder",
+        "description": "app.application.variable_specs.implementations.pressure_builder",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.implementations.pressure_builder",
+        "documentation": {}
+    },
+    {
+        "label": "VariableNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "VariableNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "DataSourceError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "TimeNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "VariableNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "DataSourceError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "VariableNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "DataSourceError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "TimeNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "VariableNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpecDirector",
+        "importPath": "app.application.variable_specs.director",
+        "description": "app.application.variable_specs.director",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.director",
+        "documentation": {}
+    },
+    {
         "label": "dataclass",
         "importPath": "dataclasses",
         "description": "dataclasses",
@@ -129,110 +417,6 @@
         "documentation": {}
     },
     {
-        "label": "BoundingBox",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
-        "label": "VariableSpec",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
-        "label": "BoundingBox",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
-        "label": "WeatherGrid",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
-        "label": "WrfMeta",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
-        "label": "VariableSpec",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
-        "label": "BoundingBox",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
-        "label": "WeatherGrid",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
-        "label": "WeatherGrid",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
-        "label": "BoundingBox",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
-        "label": "WeatherGrid",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
-        "label": "WrfMeta",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
-        "label": "BoundingBox",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
         "label": "DataCache",
         "importPath": "app.domain.interfaces",
         "description": "app.domain.interfaces",
@@ -343,94 +527,6 @@
         "importPath": "numpy",
         "description": "numpy",
         "detail": "numpy",
-        "documentation": {}
-    },
-    {
-        "label": "ABC",
-        "importPath": "abc",
-        "description": "abc",
-        "isExtraImport": true,
-        "detail": "abc",
-        "documentation": {}
-    },
-    {
-        "label": "abstractmethod",
-        "importPath": "abc",
-        "description": "abc",
-        "isExtraImport": true,
-        "detail": "abc",
-        "documentation": {}
-    },
-    {
-        "label": "VariableNotFoundError",
-        "importPath": "app.domain.exceptions",
-        "description": "app.domain.exceptions",
-        "isExtraImport": true,
-        "detail": "app.domain.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "DataSourceError",
-        "importPath": "app.domain.exceptions",
-        "description": "app.domain.exceptions",
-        "isExtraImport": true,
-        "detail": "app.domain.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "TimeNotFoundError",
-        "importPath": "app.domain.exceptions",
-        "description": "app.domain.exceptions",
-        "isExtraImport": true,
-        "detail": "app.domain.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "VariableNotFoundError",
-        "importPath": "app.domain.exceptions",
-        "description": "app.domain.exceptions",
-        "isExtraImport": true,
-        "detail": "app.domain.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "DataSourceError",
-        "importPath": "app.domain.exceptions",
-        "description": "app.domain.exceptions",
-        "isExtraImport": true,
-        "detail": "app.domain.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "VariableNotFoundError",
-        "importPath": "app.domain.exceptions",
-        "description": "app.domain.exceptions",
-        "isExtraImport": true,
-        "detail": "app.domain.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "DataSourceError",
-        "importPath": "app.domain.exceptions",
-        "description": "app.domain.exceptions",
-        "isExtraImport": true,
-        "detail": "app.domain.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "TimeNotFoundError",
-        "importPath": "app.domain.exceptions",
-        "description": "app.domain.exceptions",
-        "isExtraImport": true,
-        "detail": "app.domain.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "VariableNotFoundError",
-        "importPath": "app.domain.exceptions",
-        "description": "app.domain.exceptions",
-        "isExtraImport": true,
-        "detail": "app.domain.exceptions",
         "documentation": {}
     },
     {
@@ -1089,6 +1185,60 @@
         "documentation": {}
     },
     {
+        "label": "PressureBuilder",
+        "kind": 6,
+        "importPath": "app.application.variable_specs.implementations.pressure_builder",
+        "description": "app.application.variable_specs.implementations.pressure_builder",
+        "peekOfCode": "class PressureBuilder(VariableSpecBuilder):\n    def build_name(self) -> None:\n        self._name = \"pressure\"\n    def build_colormap(self) -> None:\n        self._colormap = \"viridis\"\n    def build_unit_label(self) -> None:\n        self._unit_label = \"Pressure (Pa)\"",
+        "detail": "app.application.variable_specs.implementations.pressure_builder",
+        "documentation": {}
+    },
+    {
+        "label": "TemperatureBuilder",
+        "kind": 6,
+        "importPath": "app.application.variable_specs.implementations.temperature_builder",
+        "description": "app.application.variable_specs.implementations.temperature_builder",
+        "peekOfCode": "class TemperatureBuilder(VariableSpecBuilder):\n    def build_name(self) -> None:\n        self._name = \"temperature\"\n    def build_colormap(self) -> None:\n        self._colormap = \"RdYlBu_r\"\n    def build_unit_label(self) -> None:\n        self._unit_label = \"Temperature (K)\"",
+        "detail": "app.application.variable_specs.implementations.temperature_builder",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpecBuilder",
+        "kind": 6,
+        "importPath": "app.application.variable_specs.builder",
+        "description": "app.application.variable_specs.builder",
+        "peekOfCode": "class VariableSpecBuilder(ABC):\n    def __init__(self) -> None:\n        self.reset()\n    def reset(self) -> None:\n        self._name: str | None = None\n        self._colormap: str | None = None\n        self._unit_label: str | None = None\n    @abstractmethod\n    def build_name(self) -> None: ...\n    @abstractmethod",
+        "detail": "app.application.variable_specs.builder",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpecDirector",
+        "kind": 6,
+        "importPath": "app.application.variable_specs.director",
+        "description": "app.application.variable_specs.director",
+        "peekOfCode": "class VariableSpecDirector:\n    def __init__(self, builder: VariableSpecBuilder) -> None:\n        self._builder = builder\n    def construct(self) -> VariableSpec:\n        self._builder.build_name()\n        self._builder.build_colormap()\n        self._builder.build_unit_label()\n        return self._builder.get_result()",
+        "detail": "app.application.variable_specs.director",
+        "documentation": {}
+    },
+    {
+        "label": "get_variable_spec",
+        "kind": 2,
+        "importPath": "app.application.variable_specs.registry",
+        "description": "app.application.variable_specs.registry",
+        "peekOfCode": "def get_variable_spec(name: str) -> VariableSpec:\n    \"\"\"\"\"\"\n    builder_cls = _BUILDERS[name]\n    if builder_cls is None:\n        raise VariableNotFoundError(f\"Unknown variable '{name}'. Available: {list(_BUILDERS)}\")\n    builder = builder_cls()\n    director = VariableSpecDirector(builder)\n    return director.construct()",
+        "detail": "app.application.variable_specs.registry",
+        "documentation": {}
+    },
+    {
+        "label": "_BUILDERS",
+        "kind": 5,
+        "importPath": "app.application.variable_specs.registry",
+        "description": "app.application.variable_specs.registry",
+        "peekOfCode": "_BUILDERS = {\n    \"temperature\" : TemperatureBuilder,\n    \"pressure\" : PressureBuilder,\n}\ndef get_variable_spec(name: str) -> VariableSpec:\n    \"\"\"\"\"\"\n    builder_cls = _BUILDERS[name]\n    if builder_cls is None:\n        raise VariableNotFoundError(f\"Unknown variable '{name}'. Available: {list(_BUILDERS)}\")\n    builder = builder_cls()",
+        "detail": "app.application.variable_specs.registry",
+        "documentation": {}
+    },
+    {
         "label": "RenderMapQuery",
         "kind": 6,
         "importPath": "app.application.dtos",
@@ -1183,7 +1333,7 @@
         "kind": 6,
         "importPath": "app.domain.entities",
         "description": "app.domain.entities",
-        "peekOfCode": "class VariableSpec:\n    \"\"\"\n    Describes how a named weather variable should be read and rendered.\n    Used by the variable registry to drive generic endpoint handling.\n    \"\"\"\n    name: str\n    colormap: str\n    unit_label: str\n@dataclass(frozen=True)\nclass WrfMeta:",
+        "peekOfCode": "class VariableSpec:\n    \"\"\"\n    Describes how a named weather variable should be read and rendered.\n    Used by the variable registry to drive generic endpoint handling.\n    \"\"\"\n    name: str | None = None\n    colormap: str | None = None\n    unit_label: str | None = None\n@dataclass(frozen=True)\nclass WrfMeta:",
         "detail": "app.domain.entities",
         "documentation": {}
     },

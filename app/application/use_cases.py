@@ -27,6 +27,7 @@ from app.domain.variable_registry import get_variable_spec
 logger = logging.getLogger(__name__)
 
 
+
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------

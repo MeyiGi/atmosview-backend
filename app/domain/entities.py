@@ -56,9 +56,9 @@ class VariableSpec:
     Used by the variable registry to drive generic endpoint handling.
     """
 
-    name: str
-    colormap: str
-    unit_label: str
+    name: str | None = None
+    colormap: str | None = None
+    unit_label: str | None = None
 
 
 @dataclass(frozen=True)
