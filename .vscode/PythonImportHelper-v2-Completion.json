@@ -152,14 +152,6 @@
         "documentation": {}
     },
     {
-        "label": "BoundingBox",
-        "importPath": "app.domain.entities",
-        "description": "app.domain.entities",
-        "isExtraImport": true,
-        "detail": "app.domain.entities",
-        "documentation": {}
-    },
-    {
         "label": "WeatherGrid",
         "importPath": "app.domain.entities",
         "description": "app.domain.entities",
@@ -301,6 +293,14 @@
         "description": "dataclasses",
         "isExtraImport": true,
         "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -527,14 +527,6 @@
         "importPath": "numpy",
         "description": "numpy",
         "detail": "numpy",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
         "documentation": {}
     },
     {
@@ -1486,7 +1478,7 @@
         "kind": 6,
         "importPath": "app.infrastructure.adapters.wrf_reader",
         "description": "app.infrastructure.adapters.wrf_reader",
-        "peekOfCode": "class WrfReaderAdapter(WrfDataReader):\n    \"\"\"Reads WRF model output files from a directory.\"\"\"\n    def __init__(self, wrf_dir: str) -> None:\n        self._wrf_dir = wrf_dir\n    # ------------------------------------------------------------------\n    # Public interface\n    # ------------------------------------------------------------------\n    def read_variable(self, wrf_variable: str, time: str | None) -> WeatherGrid:\n        path = self._resolve_path(time)\n        ds = self._open(path)",
+        "peekOfCode": "class WrfReaderAdapter(WrfDataReader):\n    def __init__(self, wrf_dir: str) -> None:\n        self._wrf_dir = wrf_dir\n    def read_variable(self, wrf_variable: str, time: str | None) -> WeatherGrid:\n        path = self._resolve_path(time)\n        ds = self._open(path)\n        if wrf_variable not in ds:\n            raise VariableNotFoundError(\n                f\"Variable '{wrf_variable}' not found in '{os.path.basename(path)}'. \"\n                f\"Available: {list(ds.data_vars)}\"",
         "detail": "app.infrastructure.adapters.wrf_reader",
         "documentation": {}
     },
@@ -1495,7 +1487,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.adapters.wrf_reader",
         "description": "app.infrastructure.adapters.wrf_reader",
-        "peekOfCode": "_WRFOUT_GLOB = \"wrfout_d01_*\"\nclass WrfReaderAdapter(WrfDataReader):\n    \"\"\"Reads WRF model output files from a directory.\"\"\"\n    def __init__(self, wrf_dir: str) -> None:\n        self._wrf_dir = wrf_dir\n    # ------------------------------------------------------------------\n    # Public interface\n    # ------------------------------------------------------------------\n    def read_variable(self, wrf_variable: str, time: str | None) -> WeatherGrid:\n        path = self._resolve_path(time)",
+        "peekOfCode": "_WRFOUT_GLOB = \"wrfout_d01_*\"\nclass WrfReaderAdapter(WrfDataReader):\n    def __init__(self, wrf_dir: str) -> None:\n        self._wrf_dir = wrf_dir\n    def read_variable(self, wrf_variable: str, time: str | None) -> WeatherGrid:\n        path = self._resolve_path(time)\n        ds = self._open(path)\n        if wrf_variable not in ds:\n            raise VariableNotFoundError(\n                f\"Variable '{wrf_variable}' not found in '{os.path.basename(path)}'. \"",
         "detail": "app.infrastructure.adapters.wrf_reader",
         "documentation": {}
     },
@@ -1513,7 +1505,7 @@
         "kind": 6,
         "importPath": "app.infrastructure.config.settings",
         "description": "app.infrastructure.config.settings",
-        "peekOfCode": "class Settings(BaseSettings):\n    # ------------------------------------------------------------------\n    # General\n    # ------------------------------------------------------------------\n    PROJECT_NAME: str = \"Weather API\"\n    LOG_LEVEL: str = \"INFO\"\n    # ------------------------------------------------------------------\n    # Data paths\n    # ------------------------------------------------------------------\n    DATA_DIR: Path = Path(__file__).resolve().parents[4] / \"data\"",
+        "peekOfCode": "class Settings(BaseSettings):\n    PROJECT_NAME: str = \"Weather API\"\n    LOG_LEVEL: str = \"INFO\"\n    DATA_DIR: Path = BASE_DIR / \"data\"\n    @property\n    def TEMPERATURE_GRIB(self) -> Path:\n        return self.DATA_DIR / \"temperature.grib\"\n    @property\n    def PRESSURE_GRIB(self) -> Path:\n        return self.DATA_DIR / \"pressure.grib\"",
         "detail": "app.infrastructure.config.settings",
         "documentation": {}
     },
@@ -1523,6 +1515,15 @@
         "importPath": "app.infrastructure.config.settings",
         "description": "app.infrastructure.config.settings",
         "peekOfCode": "def get_settings() -> Settings:\n    return Settings()",
+        "detail": "app.infrastructure.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "app.infrastructure.config.settings",
+        "description": "app.infrastructure.config.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parents[3]\nclass Settings(BaseSettings):\n    PROJECT_NAME: str = \"Weather API\"\n    LOG_LEVEL: str = \"INFO\"\n    DATA_DIR: Path = BASE_DIR / \"data\"\n    @property\n    def TEMPERATURE_GRIB(self) -> Path:\n        return self.DATA_DIR / \"temperature.grib\"\n    @property\n    def PRESSURE_GRIB(self) -> Path:",
         "detail": "app.infrastructure.config.settings",
         "documentation": {}
     },
@@ -1666,7 +1667,7 @@
         "kind": 2,
         "importPath": "app.presentation.routers.wrf",
         "description": "app.presentation.routers.wrf",
-        "peekOfCode": "def wrf_temperature(\n    time: str | None = Query(\n        None, description=\"WRF filename timestamp, e.g. 2026-03-05_10:00:00\"\n    ),\n    use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),\n) -> Response:\n    query = WrfRenderQuery(\n        wrf_variable=\"T2\",\n        display_name=\"Temperature\",\n        unit_label=\"°C\",",
+        "peekOfCode": "def wrf_temperature(\n    time: str | None = Query(\n        None,\n        description=\"WRF time. Examples: 2026-03-12_120000 or 2026-03-12_12:00:00\",\n    ),\n    use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),\n) -> Response:\n    query = WrfRenderQuery(\n        wrf_variable=\"T2\",\n        display_name=\"Temperature\",",
         "detail": "app.presentation.routers.wrf",
         "documentation": {}
     },
@@ -1693,7 +1694,7 @@
         "kind": 5,
         "importPath": "app.presentation.routers.wrf",
         "description": "app.presentation.routers.wrf",
-        "peekOfCode": "router = APIRouter(prefix=\"/wrf\", tags=[\"WRF\"])\n@router.get(\n    \"/temperature\",\n    response_class=Response,\n    responses={200: {\"content\": {\"image/png\": {}}}, 404: {}, 500: {}},\n    summary=\"WRF 2-metre temperature map\",\n)\ndef wrf_temperature(\n    time: str | None = Query(\n        None, description=\"WRF filename timestamp, e.g. 2026-03-05_10:00:00\"",
+        "peekOfCode": "router = APIRouter(prefix=\"/wrf\", tags=[\"WRF\"])\n@router.get(\n    \"/temperature\",\n    response_class=Response,\n    responses={200: {\"content\": {\"image/png\": {}}}, 404: {}, 500: {}},\n    summary=\"WRF 2-metre temperature map\",\n)\ndef wrf_temperature(\n    time: str | None = Query(\n        None,",
         "detail": "app.presentation.routers.wrf",
         "documentation": {}
     },

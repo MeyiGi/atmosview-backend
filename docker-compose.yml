@@ -7,5 +7,5 @@ services:
       - WRF_DIR=/wrf
     volumes:
       - ./data:/app/data
-      - home/user/wrf_data/wrfprd:/wrf:ro
+      - /home/user/wrf_data/wrfprd:/something
     restart: unless-stopped

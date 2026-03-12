@@ -1,20 +1,11 @@
-"""
-infrastructure/adapters/wrf_reader.py
-
-Adapter that implements WrfDataReader using xarray against WRF output files.
-
-All the messy WRF-specific logic (file discovery, variable extraction,
-coordinate normalisation) lives here and nowhere else.
-"""
-
 import glob
 import os
-from pathlib import Path
+from datetime import datetime
 
 import numpy as np
 import xarray as xr
 
-from app.domain.entities import BoundingBox, WeatherGrid, WrfMeta
+from app.domain.entities import WeatherGrid, WrfMeta
 from app.domain.exceptions import DataSourceError, VariableNotFoundError
 from app.domain.interfaces import WrfDataReader
 
@@ -22,14 +13,8 @@ _WRFOUT_GLOB = "wrfout_d01_*"
 
 
 class WrfReaderAdapter(WrfDataReader):
-    """Reads WRF model output files from a directory."""
-
     def __init__(self, wrf_dir: str) -> None:
         self._wrf_dir = wrf_dir
-
-    # ------------------------------------------------------------------
-    # Public interface
-    # ------------------------------------------------------------------
 
     def read_variable(self, wrf_variable: str, time: str | None) -> WeatherGrid:
         path = self._resolve_path(time)
@@ -41,15 +26,11 @@ class WrfReaderAdapter(WrfDataReader):
                 f"Available: {list(ds.data_vars)}"
             )
 
-        raw = ds[wrf_variable].values  # (Time, y, x)
-        # WRF stores data with a Time dimension; take the first (only) step
+        raw = ds[wrf_variable].values
         data_2d = raw[0] if raw.ndim == 3 else raw
 
-        # Build pseudo lat/lon axes from pixel indices (WRF lat/lon are in XLAT/XLONG)
         lats, lons = self._extract_coords(ds)
-
-        # Determine a sensible timestamp string from the filename or time dim
-        timestamp_str = time or os.path.basename(path).replace("wrfout_d01_", "")
+        timestamp_str = os.path.basename(path).replace("wrfout_d01_", "")
 
         return WeatherGrid(
             lats=lats,
@@ -74,10 +55,6 @@ class WrfReaderAdapter(WrfDataReader):
             available_times=times,
         )
 
-    # ------------------------------------------------------------------
-    # Private helpers
-    # ------------------------------------------------------------------
-
     def _list_files(self) -> list[str]:
         files = sorted(glob.glob(os.path.join(self._wrf_dir, _WRFOUT_GLOB)))
         if not files:
@@ -87,10 +64,31 @@ class WrfReaderAdapter(WrfDataReader):
     def _resolve_path(self, time: str | None) -> str:
         if time is None:
             return self._list_files()[-1]
-        path = os.path.join(self._wrf_dir, f"wrfout_d01_{time}")
+
+        normalized_time = self._normalize_time_for_filename(time)
+        path = os.path.join(self._wrf_dir, f"wrfout_d01_{normalized_time}")
+
         if not os.path.exists(path):
             raise DataSourceError(f"WRF output file not found: '{path}'")
         return path
+
+    @staticmethod
+    def _normalize_time_for_filename(time_str: str) -> str:
+        for fmt in (
+            "%Y-%m-%d_%H%M%S",
+            "%Y-%m-%d_%H:%M:%S",
+            "%Y-%m-%dT%H:%M:%S",
+        ):
+            try:
+                dt = datetime.strptime(time_str, fmt)
+                return dt.strftime("%Y-%m-%d_%H%M%S")
+            except ValueError:
+                continue
+
+        raise DataSourceError(
+            f"Invalid WRF time format: '{time_str}'. "
+            "Expected formats: YYYY-MM-DD_HHMMSS, YYYY-MM-DD_HH:MM:SS, or YYYY-MM-DDTHH:MM:SS"
+        )
 
     @staticmethod
     def _open(path: str) -> xr.Dataset:
@@ -113,12 +111,16 @@ class WrfReaderAdapter(WrfDataReader):
 
     @staticmethod
     def _parse_wrf_time(time_str: str):
-        """Best-effort conversion of WRF filename timestamp to datetime."""
         from datetime import datetime
-        for fmt in ("%Y-%m-%d_%H:%M:%S", "%Y-%m-%dT%H:%M:%S"):
+
+        for fmt in (
+            "%Y-%m-%d_%H%M%S",
+            "%Y-%m-%d_%H:%M:%S",
+            "%Y-%m-%dT%H:%M:%S",
+        ):
             try:
                 return datetime.strptime(time_str, fmt)
             except ValueError:
                 continue
-        # Fallback: return a sentinel so rendering still works
+
         return datetime(1900, 1, 1)

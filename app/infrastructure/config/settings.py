@@ -1,28 +1,17 @@
-"""
-infrastructure/config/settings.py
-
-All environment-driven configuration lives here.
-The rest of the codebase imports `get_settings()` rather than a bare module-level
-singleton so it can be overridden in tests via dependency injection.
-"""
-
 from functools import lru_cache
 from pathlib import Path
 
 from pydantic_settings import BaseSettings
 
 
+BASE_DIR = Path(__file__).resolve().parents[3]
+
+
 class Settings(BaseSettings):
-    # ------------------------------------------------------------------
-    # General
-    # ------------------------------------------------------------------
     PROJECT_NAME: str = "Weather API"
     LOG_LEVEL: str = "INFO"
 
-    # ------------------------------------------------------------------
-    # Data paths
-    # ------------------------------------------------------------------
-    DATA_DIR: Path = Path(__file__).resolve().parents[4] / "data"
+    DATA_DIR: Path = BASE_DIR / "data"
 
     @property
     def TEMPERATURE_GRIB(self) -> Path:
@@ -32,12 +21,8 @@ class Settings(BaseSettings):
     def PRESSURE_GRIB(self) -> Path:
         return self.DATA_DIR / "pressure.grib"
 
-    # WRF output directory (override via env var WRF_DIR)
-    WRF_DIR: str = "/wrf"
+    WRF_DIR: Path = BASE_DIR / "data" / "wrf"
 
-    # ------------------------------------------------------------------
-    # Database
-    # ------------------------------------------------------------------
     SQLITE_FILENAME: str = "weather.db"
 
     @property
@@ -46,9 +31,6 @@ class Settings(BaseSettings):
         db_path.parent.mkdir(parents=True, exist_ok=True)
         return f"sqlite:///{db_path}"
 
-    # ------------------------------------------------------------------
-    # Region bounding box (Central Asia)
-    # ------------------------------------------------------------------
     REGION_LAT_MIN: float = 35.0
     REGION_LAT_MAX: float = 55.0
     REGION_LON_MIN: float = 50.0

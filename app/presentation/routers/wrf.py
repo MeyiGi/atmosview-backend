@@ -16,7 +16,6 @@ from app.presentation.dependencies import get_wrf_meta_use_case, render_wrf_map_
 
 router = APIRouter(prefix="/wrf", tags=["WRF"])
 
-
 @router.get(
     "/temperature",
     response_class=Response,
@@ -25,7 +24,8 @@ router = APIRouter(prefix="/wrf", tags=["WRF"])
 )
 def wrf_temperature(
     time: str | None = Query(
-        None, description="WRF filename timestamp, e.g. 2026-03-05_10:00:00"
+        None,
+        description="WRF time. Examples: 2026-03-12_120000 or 2026-03-12_12:00:00",
     ),
     use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),
 ) -> Response:
