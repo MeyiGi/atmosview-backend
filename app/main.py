@@ -1,36 +1,72 @@
+"""
+main.py
+
+Application entrypoint.
+
+Responsibilities:
+  1. Create and configure the FastAPI application.
+  2. Build the DI container on startup and attach it to app.state.
+  3. Run DB migrations (create tables) on first boot.
+  4. Register routers and exception handlers.
+  5. Nothing else.
+"""
+
+import logging
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.wrf_api import router as wrf_router
 
+from app.infrastructure.config.settings import get_settings
+from app.infrastructure.container import build_container
+from app.infrastructure.persistence.database import get_engine
+from app.infrastructure.persistence.models.request_log import Base
+from app.presentation.exception_handlers import register_exception_handlers
+from app.presentation.routers import logs, weather, wrf
 
-from app.core.config import settings
-from app.core.database import engine
-from app.models import request_log
-from app.routes.routes import router
+logging.basicConfig(
+    level=get_settings().LOG_LEVEL,
+    format="%(asctime)s | %(levelname)-8s | %(name)s — %(message)s",
+)
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Create DB tables on boot. If this ever becomes "real prod", revisit this.
-    request_log.Base.metadata.create_all(bind=engine)
+    # --- startup ---
+    app.state.container = build_container()
+    Base.metadata.create_all(bind=get_engine())
     yield
+    # --- shutdown (nothing to clean up yet) ---
 
 
-app = FastAPI(
-    title=settings.PROJECT_NAME,
-    description="REST API for meteorological data visualization (GRIB → PNG)",
-    lifespan=lifespan,
-    docs_url="/",
-)
+def create_app() -> FastAPI:
+    settings = get_settings()
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+    app = FastAPI(
+        title=settings.PROJECT_NAME,
+        description=(
+            "REST API for meteorological data visualisation.\n\n"
+            "Reads GRIB and WRF output files, clips to Central Asia, "
+            "and returns rendered PNG maps."
+        ),
+        lifespan=lifespan,
+        docs_url="/",
+    )
 
-# route registration
-app.include_router(router)
-app.include_router(wrf_router)
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+
+    register_exception_handlers(app)
+
+    app.include_router(weather.router)
+    app.include_router(wrf.router)
+    app.include_router(logs.router)
+
+    return app
+
+
+app = create_app()

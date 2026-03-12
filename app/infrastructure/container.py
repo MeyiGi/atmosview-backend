@@ -1,0 +1,72 @@
+"""
+infrastructure/container.py
+
+Dependency-injection container.
+
+Singletons (adapters, cache, use case instances) are created once at
+application startup.  FastAPI dependencies in the presentation layer
+call into this container rather than instantiating infrastructure objects
+themselves.
+
+This is intentionally simple — no third-party DI framework needed at this
+scale.  If the project grows, the container can be replaced with
+dependency-injector or punq without touching any other layer.
+"""
+
+from app.domain.entities import BoundingBox
+from app.infrastructure.adapters.grib_reader import GribReaderAdapter
+from app.infrastructure.adapters.matplotlib_renderer import MatplotlibRenderer
+from app.infrastructure.adapters.wrf_reader import WrfReaderAdapter
+from app.infrastructure.cache.in_memory_cache import InMemoryLRUCache
+from app.infrastructure.config.settings import Settings, get_settings
+
+
+class Container:
+    """
+    Holds application-lifetime singletons.
+    Instantiated once in main.py and stored on app.state.
+    """
+
+    def __init__(self, settings: Settings) -> None:
+        self._settings = settings
+
+        # Shared cache — lives for the process lifetime
+        self.cache = InMemoryLRUCache(max_size=256)
+
+        # Renderer — stateless, safe to share
+        self.renderer = MatplotlibRenderer()
+
+        # GRIB readers — open the dataset once and cache on the instance
+        self.temperature_reader = GribReaderAdapter(settings.TEMPERATURE_GRIB)
+        self.pressure_reader = GribReaderAdapter(settings.PRESSURE_GRIB)
+
+        # WRF reader
+        self.wrf_reader = WrfReaderAdapter(settings.WRF_DIR)
+
+        # Region bounding box
+        self.bbox = BoundingBox(
+            lat_min=settings.REGION_LAT_MIN,
+            lat_max=settings.REGION_LAT_MAX,
+            lon_min=settings.REGION_LON_MIN,
+            lon_max=settings.REGION_LON_MAX,
+        )
+
+    # ------------------------------------------------------------------
+    # Reader look-up — maps variable name → reader instance
+    # Used by the generic /weather/{variable} router.
+    # ------------------------------------------------------------------
+
+    def get_reader_for_variable(self, variable: str) -> GribReaderAdapter:
+        mapping = {
+            "temperature": self.temperature_reader,
+            "pressure": self.pressure_reader,
+        }
+        reader = mapping.get(variable)
+        if reader is None:
+            from app.domain.exceptions import VariableNotFoundError
+            raise VariableNotFoundError(f"No reader configured for variable '{variable}'")
+        return reader
+
+
+def build_container() -> Container:
+    return Container(settings=get_settings())

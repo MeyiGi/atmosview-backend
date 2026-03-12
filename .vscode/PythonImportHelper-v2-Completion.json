@@ -1,0 +1,1791 @@
+[
+    {
+        "label": "VariableSpecBuilder",
+        "importPath": "app.application.variable_specs.builder",
+        "description": "app.application.variable_specs.builder",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.builder",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpecBuilder",
+        "importPath": "app.application.variable_specs.builder",
+        "description": "app.application.variable_specs.builder",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.builder",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpecBuilder",
+        "importPath": "app.application.variable_specs.builder",
+        "description": "app.application.variable_specs.builder",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.builder",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpec",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpec",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpec",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpec",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherGrid",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WrfMeta",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpec",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherGrid",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherGrid",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherGrid",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WrfMeta",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "isExtraImport": true,
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "TemperatureBuilder",
+        "importPath": "app.application.variable_specs.implementations.temperature_builder",
+        "description": "app.application.variable_specs.implementations.temperature_builder",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.implementations.temperature_builder",
+        "documentation": {}
+    },
+    {
+        "label": "PressureBuilder",
+        "importPath": "app.application.variable_specs.implementations.pressure_builder",
+        "description": "app.application.variable_specs.implementations.pressure_builder",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.implementations.pressure_builder",
+        "documentation": {}
+    },
+    {
+        "label": "VariableNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "VariableNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "DataSourceError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "TimeNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "VariableNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "DataSourceError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "VariableNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "DataSourceError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "TimeNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "VariableNotFoundError",
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "isExtraImport": true,
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpecDirector",
+        "importPath": "app.application.variable_specs.director",
+        "description": "app.application.variable_specs.director",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.director",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "RenderMapQuery",
+        "importPath": "app.application.dtos",
+        "description": "app.application.dtos",
+        "isExtraImport": true,
+        "detail": "app.application.dtos",
+        "documentation": {}
+    },
+    {
+        "label": "RequestLogEntry",
+        "importPath": "app.application.dtos",
+        "description": "app.application.dtos",
+        "isExtraImport": true,
+        "detail": "app.application.dtos",
+        "documentation": {}
+    },
+    {
+        "label": "WrfRenderQuery",
+        "importPath": "app.application.dtos",
+        "description": "app.application.dtos",
+        "isExtraImport": true,
+        "detail": "app.application.dtos",
+        "documentation": {}
+    },
+    {
+        "label": "RenderMapQuery",
+        "importPath": "app.application.dtos",
+        "description": "app.application.dtos",
+        "isExtraImport": true,
+        "detail": "app.application.dtos",
+        "documentation": {}
+    },
+    {
+        "label": "WrfRenderQuery",
+        "importPath": "app.application.dtos",
+        "description": "app.application.dtos",
+        "isExtraImport": true,
+        "detail": "app.application.dtos",
+        "documentation": {}
+    },
+    {
+        "label": "DataCache",
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "isExtraImport": true,
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "RequestLogRepository",
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "isExtraImport": true,
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherDataReader",
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "isExtraImport": true,
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherRenderer",
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "isExtraImport": true,
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "WrfDataReader",
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "isExtraImport": true,
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherDataReader",
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "isExtraImport": true,
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherRenderer",
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "isExtraImport": true,
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "WrfDataReader",
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "isExtraImport": true,
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "DataCache",
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "isExtraImport": true,
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "RequestLogRepository",
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "isExtraImport": true,
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "get_variable_spec",
+        "importPath": "app.domain.variable_registry",
+        "description": "app.domain.variable_registry",
+        "isExtraImport": true,
+        "detail": "app.domain.variable_registry",
+        "documentation": {}
+    },
+    {
+        "label": "get_variable_spec",
+        "importPath": "app.domain.variable_registry",
+        "description": "app.domain.variable_registry",
+        "isExtraImport": true,
+        "detail": "app.domain.variable_registry",
+        "documentation": {}
+    },
+    {
+        "label": "all_variable_names",
+        "importPath": "app.domain.variable_registry",
+        "description": "app.domain.variable_registry",
+        "isExtraImport": true,
+        "detail": "app.domain.variable_registry",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "xarray",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "xarray",
+        "description": "xarray",
+        "detail": "xarray",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "detail": "matplotlib",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "app.infrastructure.config.settings",
+        "description": "app.infrastructure.config.settings",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "app.infrastructure.config.settings",
+        "description": "app.infrastructure.config.settings",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "app.infrastructure.config.settings",
+        "description": "app.infrastructure.config.settings",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "app.infrastructure.config.settings",
+        "description": "app.infrastructure.config.settings",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "app.infrastructure.config.settings",
+        "description": "app.infrastructure.config.settings",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "glob",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "glob",
+        "description": "glob",
+        "detail": "glob",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "OrderedDict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "lru_cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "BaseSettings",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DeclarativeBase",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "RequestLogOrm",
+        "importPath": "app.infrastructure.persistence.models.request_log",
+        "description": "app.infrastructure.persistence.models.request_log",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.persistence.models.request_log",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.infrastructure.persistence.models.request_log",
+        "description": "app.infrastructure.persistence.models.request_log",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.persistence.models.request_log",
+        "documentation": {}
+    },
+    {
+        "label": "Generator",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "GribReaderAdapter",
+        "importPath": "app.infrastructure.adapters.grib_reader",
+        "description": "app.infrastructure.adapters.grib_reader",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.adapters.grib_reader",
+        "documentation": {}
+    },
+    {
+        "label": "MatplotlibRenderer",
+        "importPath": "app.infrastructure.adapters.matplotlib_renderer",
+        "description": "app.infrastructure.adapters.matplotlib_renderer",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.adapters.matplotlib_renderer",
+        "documentation": {}
+    },
+    {
+        "label": "WrfReaderAdapter",
+        "importPath": "app.infrastructure.adapters.wrf_reader",
+        "description": "app.infrastructure.adapters.wrf_reader",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.adapters.wrf_reader",
+        "documentation": {}
+    },
+    {
+        "label": "InMemoryLRUCache",
+        "importPath": "app.infrastructure.cache.in_memory_cache",
+        "description": "app.infrastructure.cache.in_memory_cache",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.cache.in_memory_cache",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "GetRequestLogsUseCase",
+        "importPath": "app.application.use_cases",
+        "description": "app.application.use_cases",
+        "isExtraImport": true,
+        "detail": "app.application.use_cases",
+        "documentation": {}
+    },
+    {
+        "label": "RenderWeatherMapUseCase",
+        "importPath": "app.application.use_cases",
+        "description": "app.application.use_cases",
+        "isExtraImport": true,
+        "detail": "app.application.use_cases",
+        "documentation": {}
+    },
+    {
+        "label": "GetWrfMetaUseCase",
+        "importPath": "app.application.use_cases",
+        "description": "app.application.use_cases",
+        "isExtraImport": true,
+        "detail": "app.application.use_cases",
+        "documentation": {}
+    },
+    {
+        "label": "RenderWrfMapUseCase",
+        "importPath": "app.application.use_cases",
+        "description": "app.application.use_cases",
+        "isExtraImport": true,
+        "detail": "app.application.use_cases",
+        "documentation": {}
+    },
+    {
+        "label": "GetRequestLogsUseCase",
+        "importPath": "app.application.use_cases",
+        "description": "app.application.use_cases",
+        "isExtraImport": true,
+        "detail": "app.application.use_cases",
+        "documentation": {}
+    },
+    {
+        "label": "GetWrfMetaUseCase",
+        "importPath": "app.application.use_cases",
+        "description": "app.application.use_cases",
+        "isExtraImport": true,
+        "detail": "app.application.use_cases",
+        "documentation": {}
+    },
+    {
+        "label": "RenderWrfMapUseCase",
+        "importPath": "app.application.use_cases",
+        "description": "app.application.use_cases",
+        "isExtraImport": true,
+        "detail": "app.application.use_cases",
+        "documentation": {}
+    },
+    {
+        "label": "get_logs_use_case",
+        "importPath": "app.presentation.dependencies",
+        "description": "app.presentation.dependencies",
+        "isExtraImport": true,
+        "detail": "app.presentation.dependencies",
+        "documentation": {}
+    },
+    {
+        "label": "get_wrf_meta_use_case",
+        "importPath": "app.presentation.dependencies",
+        "description": "app.presentation.dependencies",
+        "isExtraImport": true,
+        "detail": "app.presentation.dependencies",
+        "documentation": {}
+    },
+    {
+        "label": "render_wrf_map_use_case",
+        "importPath": "app.presentation.dependencies",
+        "description": "app.presentation.dependencies",
+        "isExtraImport": true,
+        "detail": "app.presentation.dependencies",
+        "documentation": {}
+    },
+    {
+        "label": "RequestLogResponse",
+        "importPath": "app.presentation.schemas",
+        "description": "app.presentation.schemas",
+        "isExtraImport": true,
+        "detail": "app.presentation.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherMapRequest",
+        "importPath": "app.presentation.schemas",
+        "description": "app.presentation.schemas",
+        "isExtraImport": true,
+        "detail": "app.presentation.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "get_db_session",
+        "importPath": "app.infrastructure.persistence.database",
+        "description": "app.infrastructure.persistence.database",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.persistence.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db_session",
+        "importPath": "app.infrastructure.persistence.database",
+        "description": "app.infrastructure.persistence.database",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.persistence.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_engine",
+        "importPath": "app.infrastructure.persistence.database",
+        "description": "app.infrastructure.persistence.database",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.persistence.database",
+        "documentation": {}
+    },
+    {
+        "label": "SqlAlchemyLogRepository",
+        "importPath": "app.infrastructure.persistence.repositories.log_repository",
+        "description": "app.infrastructure.persistence.repositories.log_repository",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.persistence.repositories.log_repository",
+        "documentation": {}
+    },
+    {
+        "label": "SqlAlchemyLogRepository",
+        "importPath": "app.infrastructure.persistence.repositories.log_repository",
+        "description": "app.infrastructure.persistence.repositories.log_repository",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.persistence.repositories.log_repository",
+        "documentation": {}
+    },
+    {
+        "label": "Container",
+        "importPath": "app.infrastructure.container",
+        "description": "app.infrastructure.container",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.container",
+        "documentation": {}
+    },
+    {
+        "label": "build_container",
+        "importPath": "app.infrastructure.container",
+        "description": "app.infrastructure.container",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.container",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "field_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "asynccontextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "register_exception_handlers",
+        "importPath": "app.presentation.exception_handlers",
+        "description": "app.presentation.exception_handlers",
+        "isExtraImport": true,
+        "detail": "app.presentation.exception_handlers",
+        "documentation": {}
+    },
+    {
+        "label": "logs",
+        "importPath": "app.presentation.routers",
+        "description": "app.presentation.routers",
+        "isExtraImport": true,
+        "detail": "app.presentation.routers",
+        "documentation": {}
+    },
+    {
+        "label": "weather",
+        "importPath": "app.presentation.routers",
+        "description": "app.presentation.routers",
+        "isExtraImport": true,
+        "detail": "app.presentation.routers",
+        "documentation": {}
+    },
+    {
+        "label": "wrf",
+        "importPath": "app.presentation.routers",
+        "description": "app.presentation.routers",
+        "isExtraImport": true,
+        "detail": "app.presentation.routers",
+        "documentation": {}
+    },
+    {
+        "label": "PressureBuilder",
+        "kind": 6,
+        "importPath": "app.application.variable_specs.implementations.pressure_builder",
+        "description": "app.application.variable_specs.implementations.pressure_builder",
+        "peekOfCode": "class PressureBuilder(VariableSpecBuilder):\n    def build_name(self) -> None:\n        self._name = \"pressure\"\n    def build_colormap(self) -> None:\n        self._colormap = \"viridis\"\n    def build_unit_label(self) -> None:\n        self._unit_label = \"Pressure (Pa)\"",
+        "detail": "app.application.variable_specs.implementations.pressure_builder",
+        "documentation": {}
+    },
+    {
+        "label": "TemperatureBuilder",
+        "kind": 6,
+        "importPath": "app.application.variable_specs.implementations.temperature_builder",
+        "description": "app.application.variable_specs.implementations.temperature_builder",
+        "peekOfCode": "class TemperatureBuilder(VariableSpecBuilder):\n    def build_name(self) -> None:\n        self._name = \"temperature\"\n    def build_colormap(self) -> None:\n        self._colormap = \"RdYlBu_r\"\n    def build_unit_label(self) -> None:\n        self._unit_label = \"Temperature (K)\"",
+        "detail": "app.application.variable_specs.implementations.temperature_builder",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpecBuilder",
+        "kind": 6,
+        "importPath": "app.application.variable_specs.builder",
+        "description": "app.application.variable_specs.builder",
+        "peekOfCode": "class VariableSpecBuilder(ABC):\n    def __init__(self) -> None:\n        self.reset()\n    def reset(self) -> None:\n        self._name: str | None = None\n        self._colormap: str | None = None\n        self._unit_label: str | None = None\n    @abstractmethod\n    def build_name(self) -> None: ...\n    @abstractmethod",
+        "detail": "app.application.variable_specs.builder",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpecDirector",
+        "kind": 6,
+        "importPath": "app.application.variable_specs.director",
+        "description": "app.application.variable_specs.director",
+        "peekOfCode": "class VariableSpecDirector:\n    def __init__(self, builder: VariableSpecBuilder) -> None:\n        self._builder = builder\n    def construct(self) -> VariableSpec:\n        self._builder.build_name()\n        self._builder.build_colormap()\n        self._builder.build_unit_label()\n        return self._builder.get_result()",
+        "detail": "app.application.variable_specs.director",
+        "documentation": {}
+    },
+    {
+        "label": "get_variable_spec",
+        "kind": 2,
+        "importPath": "app.application.variable_specs.registry",
+        "description": "app.application.variable_specs.registry",
+        "peekOfCode": "def get_variable_spec(name: str) -> VariableSpec:\n    \"\"\"\"\"\"\n    builder_cls = _BUILDERS[name]\n    if builder_cls is None:\n        raise VariableNotFoundError(f\"Unknown variable '{name}'. Available: {list(_BUILDERS)}\")\n    builder = builder_cls()\n    director = VariableSpecDirector(builder)\n    return director.construct()",
+        "detail": "app.application.variable_specs.registry",
+        "documentation": {}
+    },
+    {
+        "label": "_BUILDERS",
+        "kind": 5,
+        "importPath": "app.application.variable_specs.registry",
+        "description": "app.application.variable_specs.registry",
+        "peekOfCode": "_BUILDERS = {\n    \"temperature\" : TemperatureBuilder,\n    \"pressure\" : PressureBuilder,\n}\ndef get_variable_spec(name: str) -> VariableSpec:\n    \"\"\"\"\"\"\n    builder_cls = _BUILDERS[name]\n    if builder_cls is None:\n        raise VariableNotFoundError(f\"Unknown variable '{name}'. Available: {list(_BUILDERS)}\")\n    builder = builder_cls()",
+        "detail": "app.application.variable_specs.registry",
+        "documentation": {}
+    },
+    {
+        "label": "RenderMapQuery",
+        "kind": 6,
+        "importPath": "app.application.dtos",
+        "description": "app.application.dtos",
+        "peekOfCode": "class RenderMapQuery:\n    \"\"\"Input for the 'render weather map' use case.\"\"\"\n    variable: str\n    time: datetime\n@dataclass(frozen=True)\nclass WrfRenderQuery:\n    \"\"\"Input for the 'render WRF map' use case.\"\"\"\n    wrf_variable: str   # raw WRF field name, e.g. \"T2\", \"PSFC\"\n    display_name: str   # human-readable name shown in the plot title\n    unit_label: str     # colour-bar label",
+        "detail": "app.application.dtos",
+        "documentation": {}
+    },
+    {
+        "label": "WrfRenderQuery",
+        "kind": 6,
+        "importPath": "app.application.dtos",
+        "description": "app.application.dtos",
+        "peekOfCode": "class WrfRenderQuery:\n    \"\"\"Input for the 'render WRF map' use case.\"\"\"\n    wrf_variable: str   # raw WRF field name, e.g. \"T2\", \"PSFC\"\n    display_name: str   # human-readable name shown in the plot title\n    unit_label: str     # colour-bar label\n    time: str | None    # WRF filename timestamp or None → latest\n@dataclass(frozen=True)\nclass RequestLogEntry:\n    \"\"\"Read model returned by the logs use case.\"\"\"\n    id: int",
+        "detail": "app.application.dtos",
+        "documentation": {}
+    },
+    {
+        "label": "RequestLogEntry",
+        "kind": 6,
+        "importPath": "app.application.dtos",
+        "description": "app.application.dtos",
+        "peekOfCode": "class RequestLogEntry:\n    \"\"\"Read model returned by the logs use case.\"\"\"\n    id: int\n    endpoint: str\n    requested_time: str\n    status: str\n    error_message: str | None\n    created_at: datetime",
+        "detail": "app.application.dtos",
+        "documentation": {}
+    },
+    {
+        "label": "RenderWeatherMapUseCase",
+        "kind": 6,
+        "importPath": "app.application.use_cases",
+        "description": "app.application.use_cases",
+        "peekOfCode": "class RenderWeatherMapUseCase:\n    \"\"\"\n    Renders a PNG map for a registered weather variable from the primary\n    GRIB data source.\n    Depends on:\n        reader   — WeatherDataReader  (GRIB adapter injected)\n        renderer — WeatherRenderer    (matplotlib adapter injected)\n        log_repo — RequestLogRepository\n        cache    — DataCache\n        bbox     — BoundingBox        (from settings, injected once)",
+        "detail": "app.application.use_cases",
+        "documentation": {}
+    },
+    {
+        "label": "RenderWrfMapUseCase",
+        "kind": 6,
+        "importPath": "app.application.use_cases",
+        "description": "app.application.use_cases",
+        "peekOfCode": "class RenderWrfMapUseCase:\n    \"\"\"\n    Renders a PNG map from WRF model output.\n    The WRF reader handles file discovery (latest vs. specific timestamp),\n    so the use case stays thin.\n    \"\"\"\n    def __init__(\n        self,\n        wrf_reader: WrfDataReader,\n        renderer: WeatherRenderer,",
+        "detail": "app.application.use_cases",
+        "documentation": {}
+    },
+    {
+        "label": "GetWrfMetaUseCase",
+        "kind": 6,
+        "importPath": "app.application.use_cases",
+        "description": "app.application.use_cases",
+        "peekOfCode": "class GetWrfMetaUseCase:\n    def __init__(self, wrf_reader: WrfDataReader) -> None:\n        self._wrf_reader = wrf_reader\n    def execute(self) -> dict:\n        meta = self._wrf_reader.get_meta()\n        return {\n            \"bounds\": list(meta.bounds),\n            \"available_times\": meta.available_times,\n        }\n# ---------------------------------------------------------------------------",
+        "detail": "app.application.use_cases",
+        "documentation": {}
+    },
+    {
+        "label": "GetRequestLogsUseCase",
+        "kind": 6,
+        "importPath": "app.application.use_cases",
+        "description": "app.application.use_cases",
+        "peekOfCode": "class GetRequestLogsUseCase:\n    def __init__(self, log_repo: RequestLogRepository) -> None:\n        self._log_repo = log_repo\n    def execute(self, limit: int) -> list[RequestLogEntry]:\n        rows = self._log_repo.get_recent(limit)\n        return [RequestLogEntry(**row) for row in rows]",
+        "detail": "app.application.use_cases",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "app.application.use_cases",
+        "description": "app.application.use_cases",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n# ---------------------------------------------------------------------------\n# Helpers\n# ---------------------------------------------------------------------------\ndef _cache_key(variable: str, time: datetime) -> str:\n    return f\"{variable}:{time.isoformat()}\"\ndef _safe_log(\n    repo: RequestLogRepository,\n    endpoint: str,\n    time_str: str,",
+        "detail": "app.application.use_cases",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "kind": 6,
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "peekOfCode": "class BoundingBox:\n    \"\"\"Geographic region defined by lat/lon boundaries.\"\"\"\n    lat_min: float\n    lat_max: float\n    lon_min: float\n    lon_max: float\n@dataclass(frozen=True)\nclass WeatherGrid:\n    \"\"\"\n    Raw spatial weather data for a single variable at a single timestamp.",
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherGrid",
+        "kind": 6,
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "peekOfCode": "class WeatherGrid:\n    \"\"\"\n    Raw spatial weather data for a single variable at a single timestamp.\n    Immutable so it can be safely passed between layers and cached.\n    \"\"\"\n    lats: np.ndarray\n    lons: np.ndarray\n    values: np.ndarray\n    variable: str\n    time: datetime",
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "VariableSpec",
+        "kind": 6,
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "peekOfCode": "class VariableSpec:\n    \"\"\"\n    Describes how a named weather variable should be read and rendered.\n    Used by the variable registry to drive generic endpoint handling.\n    \"\"\"\n    name: str | None = None\n    colormap: str | None = None\n    unit_label: str | None = None\n@dataclass(frozen=True)\nclass WrfMeta:",
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "WrfMeta",
+        "kind": 6,
+        "importPath": "app.domain.entities",
+        "description": "app.domain.entities",
+        "peekOfCode": "class WrfMeta:\n    \"\"\"Domain representation of WRF domain metadata.\"\"\"\n    bounds: tuple[tuple[float, float], tuple[float, float]]  # [[S,W],[N,E]]\n    available_times: list[str]",
+        "detail": "app.domain.entities",
+        "documentation": {}
+    },
+    {
+        "label": "DomainError",
+        "kind": 6,
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "peekOfCode": "class DomainError(Exception):\n    \"\"\"Base class for all domain-level errors.\"\"\"\nclass DataSourceError(DomainError):\n    \"\"\"Raised when a weather data source cannot be opened or parsed.\"\"\"\nclass TimeNotFoundError(DomainError):\n    \"\"\"Raised when the requested timestamp is not available in the dataset.\"\"\"\nclass VariableNotFoundError(DomainError):\n    \"\"\"Raised when the requested variable does not exist in the dataset.\"\"\"",
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "DataSourceError",
+        "kind": 6,
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "peekOfCode": "class DataSourceError(DomainError):\n    \"\"\"Raised when a weather data source cannot be opened or parsed.\"\"\"\nclass TimeNotFoundError(DomainError):\n    \"\"\"Raised when the requested timestamp is not available in the dataset.\"\"\"\nclass VariableNotFoundError(DomainError):\n    \"\"\"Raised when the requested variable does not exist in the dataset.\"\"\"",
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "TimeNotFoundError",
+        "kind": 6,
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "peekOfCode": "class TimeNotFoundError(DomainError):\n    \"\"\"Raised when the requested timestamp is not available in the dataset.\"\"\"\nclass VariableNotFoundError(DomainError):\n    \"\"\"Raised when the requested variable does not exist in the dataset.\"\"\"",
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "VariableNotFoundError",
+        "kind": 6,
+        "importPath": "app.domain.exceptions",
+        "description": "app.domain.exceptions",
+        "peekOfCode": "class VariableNotFoundError(DomainError):\n    \"\"\"Raised when the requested variable does not exist in the dataset.\"\"\"",
+        "detail": "app.domain.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherDataReader",
+        "kind": 6,
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "peekOfCode": "class WeatherDataReader(ABC):\n    \"\"\"\n    Port for reading gridded weather data from any source (GRIB, WRF, NetCDF…).\n    A concrete adapter wraps a specific file format or API behind this contract.\n    \"\"\"\n    @abstractmethod\n    def read(self, variable: str, time: datetime, bbox: BoundingBox) -> WeatherGrid:\n        \"\"\"\n        Load data for *variable* at *time* clipped to *bbox*.\n        Raises:",
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherRenderer",
+        "kind": 6,
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "peekOfCode": "class WeatherRenderer(ABC):\n    \"\"\"Port for turning a WeatherGrid into a visual representation.\"\"\"\n    @abstractmethod\n    def render_png(self, grid: WeatherGrid) -> bytes:\n        \"\"\"Return PNG-encoded bytes for the given grid.\"\"\"\n# ---------------------------------------------------------------------------\n# WRF-specific reader port\n# ---------------------------------------------------------------------------\nclass WrfDataReader(ABC):\n    \"\"\"",
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "WrfDataReader",
+        "kind": 6,
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "peekOfCode": "class WrfDataReader(ABC):\n    \"\"\"\n    Port for reading WRF model output.  Separated from the generic reader\n    because WRF files have a different selection model (filename encodes time).\n    \"\"\"\n    @abstractmethod\n    def read_variable(self, wrf_variable: str, time: str | None) -> WeatherGrid:\n        \"\"\"\n        Read a WRF variable from the output file matching *time*\n        (or the latest file when *time* is None).",
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "RequestLogRepository",
+        "kind": 6,
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "peekOfCode": "class RequestLogRepository(ABC):\n    \"\"\"Port for persisting request audit logs.\"\"\"\n    @abstractmethod\n    def save(\n        self,\n        endpoint: str,\n        requested_time: str,\n        status: str,\n        error_message: str | None = None,\n    ) -> None: ...",
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "DataCache",
+        "kind": 6,
+        "importPath": "app.domain.interfaces",
+        "description": "app.domain.interfaces",
+        "peekOfCode": "class DataCache(ABC):\n    \"\"\"\n    Port for an in-process key/value cache.\n    Keeps the application layer independent of the caching mechanism\n    (dict, LRU, Redis, …).\n    \"\"\"\n    @abstractmethod\n    def get(self, key: str) -> object | None: ...\n    @abstractmethod\n    def set(self, key: str, value: object) -> None: ...",
+        "detail": "app.domain.interfaces",
+        "documentation": {}
+    },
+    {
+        "label": "get_variable_spec",
+        "kind": 2,
+        "importPath": "app.domain.variable_registry",
+        "description": "app.domain.variable_registry",
+        "peekOfCode": "def get_variable_spec(name: str) -> VariableSpec:\n    \"\"\"\n    Return the VariableSpec for *name*.\n    Raises:\n        VariableNotFoundError: if the variable is not registered.\n    \"\"\"\n    try:\n        return _REGISTRY[name]\n    except KeyError:\n        raise VariableNotFoundError(",
+        "detail": "app.domain.variable_registry",
+        "documentation": {}
+    },
+    {
+        "label": "all_variable_names",
+        "kind": 2,
+        "importPath": "app.domain.variable_registry",
+        "description": "app.domain.variable_registry",
+        "peekOfCode": "def all_variable_names() -> list[str]:\n    return list(_REGISTRY)",
+        "detail": "app.domain.variable_registry",
+        "documentation": {}
+    },
+    {
+        "label": "GribReaderAdapter",
+        "kind": 6,
+        "importPath": "app.infrastructure.adapters.grib_reader",
+        "description": "app.infrastructure.adapters.grib_reader",
+        "peekOfCode": "class GribReaderAdapter(WeatherDataReader):\n    \"\"\"Reads a single GRIB file and exposes it via the WeatherDataReader port.\"\"\"\n    def __init__(self, path: Path) -> None:\n        if not path.exists():\n            raise DataSourceError(f\"GRIB file not found: {path}\")\n        if path.suffix.lower() not in {\".grib\", \".grb\", \".grib2\", \".grb2\"}:\n            raise DataSourceError(f\"Not a recognised GRIB extension: {path}\")\n        self._path = path\n        self._ds: xr.Dataset | None = None\n    # ------------------------------------------------------------------",
+        "detail": "app.infrastructure.adapters.grib_reader",
+        "documentation": {}
+    },
+    {
+        "label": "_TIME_COORD_CANDIDATES",
+        "kind": 5,
+        "importPath": "app.infrastructure.adapters.grib_reader",
+        "description": "app.infrastructure.adapters.grib_reader",
+        "peekOfCode": "_TIME_COORD_CANDIDATES = (\"time\", \"valid_time\")\nclass GribReaderAdapter(WeatherDataReader):\n    \"\"\"Reads a single GRIB file and exposes it via the WeatherDataReader port.\"\"\"\n    def __init__(self, path: Path) -> None:\n        if not path.exists():\n            raise DataSourceError(f\"GRIB file not found: {path}\")\n        if path.suffix.lower() not in {\".grib\", \".grb\", \".grib2\", \".grb2\"}:\n            raise DataSourceError(f\"Not a recognised GRIB extension: {path}\")\n        self._path = path\n        self._ds: xr.Dataset | None = None",
+        "detail": "app.infrastructure.adapters.grib_reader",
+        "documentation": {}
+    },
+    {
+        "label": "tha",
+        "kind": 6,
+        "importPath": "app.infrastructure.adapters.matplotlib_renderer",
+        "description": "app.infrastructure.adapters.matplotlib_renderer",
+        "peekOfCode": "class that implements WeatherRenderer and wiring it in the DI container —\nnothing else changes.\n\"\"\"\nimport io\nfrom datetime import datetime\nimport matplotlib\nmatplotlib.use(\"Agg\")  # must precede any other matplotlib import\nimport matplotlib.pyplot as plt\nimport numpy as np\nfrom app.domain.entities import WeatherGrid",
+        "detail": "app.infrastructure.adapters.matplotlib_renderer",
+        "documentation": {}
+    },
+    {
+        "label": "MatplotlibRenderer",
+        "kind": 6,
+        "importPath": "app.infrastructure.adapters.matplotlib_renderer",
+        "description": "app.infrastructure.adapters.matplotlib_renderer",
+        "peekOfCode": "class MatplotlibRenderer(WeatherRenderer):\n    \"\"\"Renders WeatherGrid objects into PNG bytes using matplotlib.\"\"\"\n    def render_png(self, grid: WeatherGrid) -> bytes:\n        try:\n            spec = get_variable_spec(grid.variable)\n            cmap = spec.colormap\n            unit_label = spec.unit_label\n        except VariableNotFoundError:\n            # WRF variables aren't in the registry; fall back gracefully\n            cmap = \"plasma\"",
+        "detail": "app.infrastructure.adapters.matplotlib_renderer",
+        "documentation": {}
+    },
+    {
+        "label": "WrfReaderAdapter",
+        "kind": 6,
+        "importPath": "app.infrastructure.adapters.wrf_reader",
+        "description": "app.infrastructure.adapters.wrf_reader",
+        "peekOfCode": "class WrfReaderAdapter(WrfDataReader):\n    def __init__(self, wrf_dir: str) -> None:\n        self._wrf_dir = wrf_dir\n    def read_variable(self, wrf_variable: str, time: str | None) -> WeatherGrid:\n        path = self._resolve_path(time)\n        ds = self._open(path)\n        if wrf_variable not in ds:\n            raise VariableNotFoundError(\n                f\"Variable '{wrf_variable}' not found in '{os.path.basename(path)}'. \"\n                f\"Available: {list(ds.data_vars)}\"",
+        "detail": "app.infrastructure.adapters.wrf_reader",
+        "documentation": {}
+    },
+    {
+        "label": "_WRFOUT_GLOB",
+        "kind": 5,
+        "importPath": "app.infrastructure.adapters.wrf_reader",
+        "description": "app.infrastructure.adapters.wrf_reader",
+        "peekOfCode": "_WRFOUT_GLOB = \"wrfout_d01_*\"\nclass WrfReaderAdapter(WrfDataReader):\n    def __init__(self, wrf_dir: str) -> None:\n        self._wrf_dir = wrf_dir\n    def read_variable(self, wrf_variable: str, time: str | None) -> WeatherGrid:\n        path = self._resolve_path(time)\n        ds = self._open(path)\n        if wrf_variable not in ds:\n            raise VariableNotFoundError(\n                f\"Variable '{wrf_variable}' not found in '{os.path.basename(path)}'. \"",
+        "detail": "app.infrastructure.adapters.wrf_reader",
+        "documentation": {}
+    },
+    {
+        "label": "InMemoryLRUCache",
+        "kind": 6,
+        "importPath": "app.infrastructure.cache.in_memory_cache",
+        "description": "app.infrastructure.cache.in_memory_cache",
+        "peekOfCode": "class InMemoryLRUCache(DataCache):\n    \"\"\"\n    Simple bounded LRU cache.\n    Rendered PNG maps are typically a few hundred KB each.  A cap of 128\n    entries keeps memory usage predictable while still covering the common\n    case of repeated requests for the same variable + timestamp.\n    \"\"\"\n    def __init__(self, max_size: int = 128) -> None:\n        self._max_size = max_size\n        self._store: OrderedDict[str, object] = OrderedDict()",
+        "detail": "app.infrastructure.cache.in_memory_cache",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "kind": 6,
+        "importPath": "app.infrastructure.config.settings",
+        "description": "app.infrastructure.config.settings",
+        "peekOfCode": "class Settings(BaseSettings):\n    PROJECT_NAME: str = \"Weather API\"\n    LOG_LEVEL: str = \"INFO\"\n    DATA_DIR: Path = BASE_DIR / \"data\"\n    @property\n    def TEMPERATURE_GRIB(self) -> Path:\n        return self.DATA_DIR / \"temperature.grib\"\n    @property\n    def PRESSURE_GRIB(self) -> Path:\n        return self.DATA_DIR / \"pressure.grib\"",
+        "detail": "app.infrastructure.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "kind": 2,
+        "importPath": "app.infrastructure.config.settings",
+        "description": "app.infrastructure.config.settings",
+        "peekOfCode": "def get_settings() -> Settings:\n    return Settings()",
+        "detail": "app.infrastructure.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "app.infrastructure.config.settings",
+        "description": "app.infrastructure.config.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parents[3]\nclass Settings(BaseSettings):\n    PROJECT_NAME: str = \"Weather API\"\n    LOG_LEVEL: str = \"INFO\"\n    DATA_DIR: Path = BASE_DIR / \"data\"\n    @property\n    def TEMPERATURE_GRIB(self) -> Path:\n        return self.DATA_DIR / \"temperature.grib\"\n    @property\n    def PRESSURE_GRIB(self) -> Path:",
+        "detail": "app.infrastructure.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 6,
+        "importPath": "app.infrastructure.persistence.models.request_log",
+        "description": "app.infrastructure.persistence.models.request_log",
+        "peekOfCode": "class Base(DeclarativeBase):\n    pass\nclass RequestLogOrm(Base):\n    \"\"\"Persists every API request for usage tracking and debugging.\"\"\"\n    __tablename__ = \"request_logs\"\n    id = Column(Integer, primary_key=True, index=True)\n    endpoint = Column(String, nullable=False)\n    requested_time = Column(String, nullable=False)   # kept as String for flexibility\n    status = Column(String, nullable=False)\n    error_message = Column(String, nullable=True)",
+        "detail": "app.infrastructure.persistence.models.request_log",
+        "documentation": {}
+    },
+    {
+        "label": "RequestLogOrm",
+        "kind": 6,
+        "importPath": "app.infrastructure.persistence.models.request_log",
+        "description": "app.infrastructure.persistence.models.request_log",
+        "peekOfCode": "class RequestLogOrm(Base):\n    \"\"\"Persists every API request for usage tracking and debugging.\"\"\"\n    __tablename__ = \"request_logs\"\n    id = Column(Integer, primary_key=True, index=True)\n    endpoint = Column(String, nullable=False)\n    requested_time = Column(String, nullable=False)   # kept as String for flexibility\n    status = Column(String, nullable=False)\n    error_message = Column(String, nullable=True)\n    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)",
+        "detail": "app.infrastructure.persistence.models.request_log",
+        "documentation": {}
+    },
+    {
+        "label": "SqlAlchemyLogRepository",
+        "kind": 6,
+        "importPath": "app.infrastructure.persistence.repositories.log_repository",
+        "description": "app.infrastructure.persistence.repositories.log_repository",
+        "peekOfCode": "class SqlAlchemyLogRepository(RequestLogRepository):\n    \"\"\"Persists request logs via SQLAlchemy.\"\"\"\n    def __init__(self, session: Session) -> None:\n        self._session = session\n    def save(\n        self,\n        endpoint: str,\n        requested_time: str,\n        status: str,\n        error_message: str | None = None,",
+        "detail": "app.infrastructure.persistence.repositories.log_repository",
+        "documentation": {}
+    },
+    {
+        "label": "get_engine",
+        "kind": 2,
+        "importPath": "app.infrastructure.persistence.database",
+        "description": "app.infrastructure.persistence.database",
+        "peekOfCode": "def get_engine():\n    return _engine\ndef get_db_session() -> Generator[Session, None, None]:\n    \"\"\"FastAPI dependency that yields a DB session and ensures it is closed.\"\"\"\n    session = _SessionFactory()\n    try:\n        yield session\n    finally:\n        session.close()",
+        "detail": "app.infrastructure.persistence.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db_session",
+        "kind": 2,
+        "importPath": "app.infrastructure.persistence.database",
+        "description": "app.infrastructure.persistence.database",
+        "peekOfCode": "def get_db_session() -> Generator[Session, None, None]:\n    \"\"\"FastAPI dependency that yields a DB session and ensures it is closed.\"\"\"\n    session = _SessionFactory()\n    try:\n        yield session\n    finally:\n        session.close()",
+        "detail": "app.infrastructure.persistence.database",
+        "documentation": {}
+    },
+    {
+        "label": "_engine",
+        "kind": 5,
+        "importPath": "app.infrastructure.persistence.database",
+        "description": "app.infrastructure.persistence.database",
+        "peekOfCode": "_engine = _build_engine()\n_SessionFactory = sessionmaker(autocommit=False, autoflush=False, bind=_engine)\ndef get_engine():\n    return _engine\ndef get_db_session() -> Generator[Session, None, None]:\n    \"\"\"FastAPI dependency that yields a DB session and ensures it is closed.\"\"\"\n    session = _SessionFactory()\n    try:\n        yield session\n    finally:",
+        "detail": "app.infrastructure.persistence.database",
+        "documentation": {}
+    },
+    {
+        "label": "_SessionFactory",
+        "kind": 5,
+        "importPath": "app.infrastructure.persistence.database",
+        "description": "app.infrastructure.persistence.database",
+        "peekOfCode": "_SessionFactory = sessionmaker(autocommit=False, autoflush=False, bind=_engine)\ndef get_engine():\n    return _engine\ndef get_db_session() -> Generator[Session, None, None]:\n    \"\"\"FastAPI dependency that yields a DB session and ensures it is closed.\"\"\"\n    session = _SessionFactory()\n    try:\n        yield session\n    finally:\n        session.close()",
+        "detail": "app.infrastructure.persistence.database",
+        "documentation": {}
+    },
+    {
+        "label": "Container",
+        "kind": 6,
+        "importPath": "app.infrastructure.container",
+        "description": "app.infrastructure.container",
+        "peekOfCode": "class Container:\n    \"\"\"\n    Holds application-lifetime singletons.\n    Instantiated once in main.py and stored on app.state.\n    \"\"\"\n    def __init__(self, settings: Settings) -> None:\n        self._settings = settings\n        # Shared cache — lives for the process lifetime\n        self.cache = InMemoryLRUCache(max_size=256)\n        # Renderer — stateless, safe to share",
+        "detail": "app.infrastructure.container",
+        "documentation": {}
+    },
+    {
+        "label": "build_container",
+        "kind": 2,
+        "importPath": "app.infrastructure.container",
+        "description": "app.infrastructure.container",
+        "peekOfCode": "def build_container() -> Container:\n    return Container(settings=get_settings())",
+        "detail": "app.infrastructure.container",
+        "documentation": {}
+    },
+    {
+        "label": "get_logs",
+        "kind": 2,
+        "importPath": "app.presentation.routers.logs",
+        "description": "app.presentation.routers.logs",
+        "peekOfCode": "def get_logs(\n    limit: int = 50,\n    use_case: GetRequestLogsUseCase = Depends(get_logs_use_case),\n) -> list[RequestLogResponse]:\n    entries = use_case.execute(limit=limit)\n    return [RequestLogResponse(**vars(entry)) for entry in entries]",
+        "detail": "app.presentation.routers.logs",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.presentation.routers.logs",
+        "description": "app.presentation.routers.logs",
+        "peekOfCode": "router = APIRouter(tags=[\"Logs\"])\n@router.get(\n    \"/logs\",\n    response_model=list[RequestLogResponse],\n    summary=\"Recent request logs\",\n    description=\"Returns the most recent API request logs, ordered newest first.\",\n)\ndef get_logs(\n    limit: int = 50,\n    use_case: GetRequestLogsUseCase = Depends(get_logs_use_case),",
+        "detail": "app.presentation.routers.logs",
+        "documentation": {}
+    },
+    {
+        "label": "get_weather_map",
+        "kind": 2,
+        "importPath": "app.presentation.routers.weather",
+        "description": "app.presentation.routers.weather",
+        "peekOfCode": "def get_weather_map(\n    variable: str,\n    request: Request,\n    time: str = Query(..., description=\"ISO 8601 datetime, e.g. 2025-01-29T00:00\"),\n    session: Session = Depends(get_db_session),\n) -> Response:\n    validated = WeatherMapRequest(time=time)\n    use_case = _build_use_case(variable, request, session)\n    png = use_case.execute(RenderMapQuery(variable=variable, time=validated.time))\n    return Response(content=png, media_type=\"image/png\")",
+        "detail": "app.presentation.routers.weather",
+        "documentation": {}
+    },
+    {
+        "label": "get_temperature",
+        "kind": 2,
+        "importPath": "app.presentation.routers.weather",
+        "description": "app.presentation.routers.weather",
+        "peekOfCode": "def get_temperature(\n    request: Request,\n    time: str = Query(...),\n    session: Session = Depends(get_db_session),\n) -> Response:\n    validated = WeatherMapRequest(time=time)\n    use_case = _build_use_case(\"temperature\", request, session)\n    png = use_case.execute(RenderMapQuery(variable=\"temperature\", time=validated.time))\n    return Response(content=png, media_type=\"image/png\")\n@router.get(\"/pressure\", response_class=Response, include_in_schema=False)",
+        "detail": "app.presentation.routers.weather",
+        "documentation": {}
+    },
+    {
+        "label": "get_pressure",
+        "kind": 2,
+        "importPath": "app.presentation.routers.weather",
+        "description": "app.presentation.routers.weather",
+        "peekOfCode": "def get_pressure(\n    request: Request,\n    time: str = Query(...),\n    session: Session = Depends(get_db_session),\n) -> Response:\n    validated = WeatherMapRequest(time=time)\n    use_case = _build_use_case(\"pressure\", request, session)\n    png = use_case.execute(RenderMapQuery(variable=\"pressure\", time=validated.time))\n    return Response(content=png, media_type=\"image/png\")",
+        "detail": "app.presentation.routers.weather",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.presentation.routers.weather",
+        "description": "app.presentation.routers.weather",
+        "peekOfCode": "router = APIRouter(tags=[\"Weather Maps\"])\ndef _build_use_case(variable: str, request: Request, session: Session) -> RenderWeatherMapUseCase:\n    from app.application.use_cases import RenderWeatherMapUseCase\n    container = request.app.state.container\n    reader = container.get_reader_for_variable(variable)\n    log_repo = SqlAlchemyLogRepository(session)\n    return RenderWeatherMapUseCase(\n        reader=reader,\n        renderer=container.renderer,\n        log_repo=log_repo,",
+        "detail": "app.presentation.routers.weather",
+        "documentation": {}
+    },
+    {
+        "label": "wrf_temperature",
+        "kind": 2,
+        "importPath": "app.presentation.routers.wrf",
+        "description": "app.presentation.routers.wrf",
+        "peekOfCode": "def wrf_temperature(\n    time: str | None = Query(\n        None,\n        description=\"WRF time. Examples: 2026-03-12_120000 or 2026-03-12_12:00:00\",\n    ),\n    use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),\n) -> Response:\n    query = WrfRenderQuery(\n        wrf_variable=\"T2\",\n        display_name=\"Temperature\",",
+        "detail": "app.presentation.routers.wrf",
+        "documentation": {}
+    },
+    {
+        "label": "wrf_pressure",
+        "kind": 2,
+        "importPath": "app.presentation.routers.wrf",
+        "description": "app.presentation.routers.wrf",
+        "peekOfCode": "def wrf_pressure(\n    time: str | None = Query(None, description=\"WRF filename timestamp\"),\n    use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),\n) -> Response:\n    query = WrfRenderQuery(\n        wrf_variable=\"PSFC\",\n        display_name=\"Pressure\",\n        unit_label=\"hPa\",\n        time=time,\n    )",
+        "detail": "app.presentation.routers.wrf",
+        "documentation": {}
+    },
+    {
+        "label": "wrf_meta",
+        "kind": 2,
+        "importPath": "app.presentation.routers.wrf",
+        "description": "app.presentation.routers.wrf",
+        "peekOfCode": "def wrf_meta(\n    use_case: GetWrfMetaUseCase = Depends(get_wrf_meta_use_case),\n) -> JSONResponse:\n    return JSONResponse(content=use_case.execute())",
+        "detail": "app.presentation.routers.wrf",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.presentation.routers.wrf",
+        "description": "app.presentation.routers.wrf",
+        "peekOfCode": "router = APIRouter(prefix=\"/wrf\", tags=[\"WRF\"])\n@router.get(\n    \"/temperature\",\n    response_class=Response,\n    responses={200: {\"content\": {\"image/png\": {}}}, 404: {}, 500: {}},\n    summary=\"WRF 2-metre temperature map\",\n)\ndef wrf_temperature(\n    time: str | None = Query(\n        None,",
+        "detail": "app.presentation.routers.wrf",
+        "documentation": {}
+    },
+    {
+        "label": "get_container",
+        "kind": 2,
+        "importPath": "app.presentation.dependencies",
+        "description": "app.presentation.dependencies",
+        "peekOfCode": "def get_container(request: Request) -> Container:\n    return request.app.state.container\ndef get_log_repo(\n    session: Session = Depends(get_db_session),\n) -> SqlAlchemyLogRepository:\n    return SqlAlchemyLogRepository(session)\ndef render_wrf_map_use_case(\n    container: Container = Depends(get_container),\n    log_repo: SqlAlchemyLogRepository = Depends(get_log_repo),\n) -> RenderWrfMapUseCase:",
+        "detail": "app.presentation.dependencies",
+        "documentation": {}
+    },
+    {
+        "label": "get_log_repo",
+        "kind": 2,
+        "importPath": "app.presentation.dependencies",
+        "description": "app.presentation.dependencies",
+        "peekOfCode": "def get_log_repo(\n    session: Session = Depends(get_db_session),\n) -> SqlAlchemyLogRepository:\n    return SqlAlchemyLogRepository(session)\ndef render_wrf_map_use_case(\n    container: Container = Depends(get_container),\n    log_repo: SqlAlchemyLogRepository = Depends(get_log_repo),\n) -> RenderWrfMapUseCase:\n    return RenderWrfMapUseCase(\n        wrf_reader=container.wrf_reader,",
+        "detail": "app.presentation.dependencies",
+        "documentation": {}
+    },
+    {
+        "label": "render_wrf_map_use_case",
+        "kind": 2,
+        "importPath": "app.presentation.dependencies",
+        "description": "app.presentation.dependencies",
+        "peekOfCode": "def render_wrf_map_use_case(\n    container: Container = Depends(get_container),\n    log_repo: SqlAlchemyLogRepository = Depends(get_log_repo),\n) -> RenderWrfMapUseCase:\n    return RenderWrfMapUseCase(\n        wrf_reader=container.wrf_reader,\n        renderer=container.renderer,\n        log_repo=log_repo,\n    )\ndef get_wrf_meta_use_case(",
+        "detail": "app.presentation.dependencies",
+        "documentation": {}
+    },
+    {
+        "label": "get_wrf_meta_use_case",
+        "kind": 2,
+        "importPath": "app.presentation.dependencies",
+        "description": "app.presentation.dependencies",
+        "peekOfCode": "def get_wrf_meta_use_case(\n    container: Container = Depends(get_container),\n) -> GetWrfMetaUseCase:\n    return GetWrfMetaUseCase(wrf_reader=container.wrf_reader)\ndef get_logs_use_case(\n    log_repo: SqlAlchemyLogRepository = Depends(get_log_repo),\n) -> GetRequestLogsUseCase:\n    return GetRequestLogsUseCase(log_repo=log_repo)",
+        "detail": "app.presentation.dependencies",
+        "documentation": {}
+    },
+    {
+        "label": "get_logs_use_case",
+        "kind": 2,
+        "importPath": "app.presentation.dependencies",
+        "description": "app.presentation.dependencies",
+        "peekOfCode": "def get_logs_use_case(\n    log_repo: SqlAlchemyLogRepository = Depends(get_log_repo),\n) -> GetRequestLogsUseCase:\n    return GetRequestLogsUseCase(log_repo=log_repo)",
+        "detail": "app.presentation.dependencies",
+        "documentation": {}
+    },
+    {
+        "label": "register_exception_handlers",
+        "kind": 2,
+        "importPath": "app.presentation.exception_handlers",
+        "description": "app.presentation.exception_handlers",
+        "peekOfCode": "def register_exception_handlers(app: FastAPI) -> None:\n    @app.exception_handler(VariableNotFoundError)\n    async def variable_not_found(request: Request, exc: VariableNotFoundError):\n        return JSONResponse(status_code=404, content={\"detail\": str(exc)})\n    @app.exception_handler(TimeNotFoundError)\n    async def time_not_found(request: Request, exc: TimeNotFoundError):\n        return JSONResponse(status_code=404, content={\"detail\": str(exc)})\n    @app.exception_handler(DataSourceError)\n    async def data_source_error(request: Request, exc: DataSourceError):\n        return JSONResponse(status_code=500, content={\"detail\": str(exc)})",
+        "detail": "app.presentation.exception_handlers",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherMapRequest",
+        "kind": 6,
+        "importPath": "app.presentation.schemas",
+        "description": "app.presentation.schemas",
+        "peekOfCode": "class WeatherMapRequest(BaseModel):\n    \"\"\"Query parameters for weather map endpoints.\"\"\"\n    time: datetime\n    @field_validator(\"time\", mode=\"before\")\n    @classmethod\n    def parse_iso_time(cls, v: str | datetime) -> datetime:\n        if isinstance(v, datetime):\n            return v\n        try:\n            return datetime.fromisoformat(str(v).strip())",
+        "detail": "app.presentation.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RequestLogResponse",
+        "kind": 6,
+        "importPath": "app.presentation.schemas",
+        "description": "app.presentation.schemas",
+        "peekOfCode": "class RequestLogResponse(BaseModel):\n    id: int\n    endpoint: str\n    requested_time: str\n    status: str\n    error_message: str | None\n    created_at: datetime\n    model_config = {\"from_attributes\": True}",
+        "detail": "app.presentation.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "create_app",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def create_app() -> FastAPI:\n    settings = get_settings()\n    app = FastAPI(\n        title=settings.PROJECT_NAME,\n        description=(\n            \"REST API for meteorological data visualisation.\\n\\n\"\n            \"Reads GRIB and WRF output files, clips to Central Asia, \"\n            \"and returns rendered PNG maps.\"\n        ),\n        lifespan=lifespan,",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "app = create_app()",
+        "detail": "app.main",
+        "documentation": {}
+    }
+]
