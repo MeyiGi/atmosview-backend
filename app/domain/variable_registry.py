@@ -10,21 +10,11 @@ from app.domain.entities import VariableSpec
 from app.domain.exceptions import VariableNotFoundError
 
 _REGISTRY: dict[str, VariableSpec] = {
-    "temperature": VariableSpec(
-        name="temperature",
-        colormap="RdYlBu_r",
-        unit_label="Temperature (K)",
-    ),
-    "pressure": VariableSpec(
-        name="pressure",
-        colormap="viridis",
-        unit_label="Pressure (Pa)",
-    ),
-    "precipitation": VariableSpec(
-        name="precipitation",
-        colormap="Blues",
-        unit_label="Precipitation (mm)",
-    ),
+    "temperature": VariableSpec(name="temperature", colormap="RdYlBu_r", unit_label="Temperature (K)"),
+    "pressure":    VariableSpec(name="pressure",    colormap="viridis",   unit_label="Pressure (Pa)"),
+    "precipitation": VariableSpec(name="precipitation", colormap="Blues", unit_label="Precipitation (mm)"),
+    "wind_speed":    VariableSpec(name="wind_speed",    colormap="YlOrRd", unit_label="Wind Speed (m/s)"),
+    "wind_direction": VariableSpec(name="wind_direction", colormap="hsv",  unit_label="Wind Direction (°)"),
 }
 
 

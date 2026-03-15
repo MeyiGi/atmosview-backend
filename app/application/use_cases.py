@@ -13,7 +13,7 @@ Rules:
 import logging
 from datetime import datetime
 
-from app.application.dtos import RenderMapQuery, RequestLogEntry, WrfRenderQuery
+from app.application.dtos import RenderMapQuery, RenderWindQuery, RequestLogEntry, WrfRenderQuery
 from app.domain.entities import BoundingBox, VariableSpec
 from app.domain.interfaces import (
     DataCache,
@@ -166,3 +166,31 @@ class GetRequestLogsUseCase:
     def execute(self, limit: int) -> list[RequestLogEntry]:
         rows = self._log_repo.get_recent(limit)
         return [RequestLogEntry(**row) for row in rows]
+
+# ---------------------------------------------------------------------------
+# Use case: show wind information
+# ---------------------------------------------------------------------------
+
+class RenderWrfWindUseCase:
+    """
+    Renders a single PNG with wind speed as background
+    and wind direction as arrows. Reads U10 and V10 directly
+    so the renderer gets both components.
+    """
+
+    def __init__(
+        self,
+        wrf_reader: WrfDataReader,
+        renderer: WeatherRenderer,
+        log_repo: RequestLogRepository,
+    ) -> None:
+        self._wrf_reader = wrf_reader
+        self._renderer = renderer
+        self._log_repo = log_repo
+
+    def execute(self, query: RenderWindQuery) -> bytes:
+        u_grid = self._wrf_reader.read_variable("U10", query.time)
+        v_grid = self._wrf_reader.read_variable("V10", query.time)
+        png = self._renderer.render_wind_png(u_grid, v_grid)
+        _safe_log(self._log_repo, "/wrf/wind", query.time or "latest", "success")
+        return png

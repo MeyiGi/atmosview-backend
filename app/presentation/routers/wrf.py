@@ -8,9 +8,9 @@ WrfRenderQuery DTO, and delegates entirely to the use case.
 from fastapi import APIRouter, Depends, Query
 from fastapi.responses import JSONResponse, Response
 
-from app.application.dtos import WrfRenderQuery
-from app.application.use_cases import GetWrfMetaUseCase, RenderWrfMapUseCase
-from app.presentation.dependencies import get_wrf_meta_use_case, render_wrf_map_use_case
+from app.application.dtos import RenderWindQuery, WrfRenderQuery
+from app.application.use_cases import GetWrfMetaUseCase, RenderWrfMapUseCase, RenderWrfWindUseCase
+from app.presentation.dependencies import get_wrf_meta_use_case, render_wrf_map_use_case, render_wrf_wind_use_case
 
 router = APIRouter(prefix="/wrf", tags=["WRF"])
 
@@ -66,6 +66,18 @@ def wrf_precipitation(
     query = WrfRenderQuery(wrf_variable="PRECIPITATION", display_name="Precipitation", unit_label="mm", time=time)
     return Response(content=use_case.execute(query), media_type="image/png")
 
+@router.get(
+    "/wind",
+    response_class=Response,
+    responses={200: {"content": {"image/png": {}}}, 404: {}, 500: {}},
+    summary="WRF wind map",
+    description="Wind speed as background color, wind direction as arrows. Uses U10 and V10 components.",
+)
+def wrf_wind(
+    time: str | None = Query(None, description=_TIME_DESCRIPTION),
+    use_case: RenderWrfWindUseCase = Depends(render_wrf_wind_use_case),
+) -> Response:
+    return Response(content=use_case.execute(RenderWindQuery(time=time)), media_type="image/png")
 
 @router.get(
     "/meta",

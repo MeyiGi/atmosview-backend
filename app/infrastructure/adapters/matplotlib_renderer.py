@@ -26,6 +26,60 @@ from app.infrastructure.config.settings import get_settings
 class MatplotlibRenderer(WeatherRenderer):
     """Renders WeatherGrid objects into PNG bytes using matplotlib."""
 
+    def render_wind_png(self, u_grid: WeatherGrid, v_grid: WeatherGrid) -> bytes:
+        u = u_grid.values
+        v = v_grid.values
+        lats = u_grid.lats
+        lons = u_grid.lons
+
+        if lats.ndim == 1:
+            lons_2d, lats_2d = np.meshgrid(lons, lats)
+        else:
+            lats_2d, lons_2d = lats, lons
+
+        speed = np.sqrt(u ** 2 + v ** 2)
+
+        fig, ax = plt.subplots(figsize=(10, 6))
+
+        # Speed as background
+        levels = np.linspace(speed.min(), speed.max(), 100)
+        cf = ax.contourf(lons_2d, lats_2d, speed, levels=levels, cmap="YlOrRd", extend="both")
+        cbar = fig.colorbar(cf, ax=ax, pad=0.02)
+        cbar.set_label("Wind Speed (m/s)", fontsize=11)
+
+        # Direction arrows — subsample so arrows don't overlap
+        step = max(1, lats_2d.shape[0] // 20)
+        ax.quiver(
+            lons_2d[::step, ::step],
+            lats_2d[::step, ::step],
+            u[::step, ::step],
+            v[::step, ::step],
+            color="white",
+            scale=150,
+            width=0.003,
+            alpha=0.8,
+        )
+
+        mean_lat = np.mean(lats_2d)
+        ax.set_aspect(1.0 / np.cos(np.radians(mean_lat)))
+        ax.set_xlim(np.min(lons_2d), np.max(lons_2d))
+        ax.set_ylim(np.min(lats_2d), np.max(lats_2d))
+        ax.set_xlabel("Longitude", fontsize=10)
+        ax.set_ylabel("Latitude", fontsize=10)
+        ax.set_title(
+            f"Central Asia — Wind Speed & Direction\n"
+            f"{u_grid.time.strftime('%Y-%m-%d %H:%M UTC')}",
+            fontsize=13,
+        )
+        ax.grid(True, linestyle="--", linewidth=0.5, alpha=0.5)
+        plt.tight_layout()
+
+        buf = io.BytesIO()
+        fig.savefig(buf, format="png", dpi=300, bbox_inches="tight")
+        plt.close(fig)
+        buf.seek(0)
+        return buf.read()
+    
     def render_png(self, grid: WeatherGrid) -> bytes:
         try:
             spec = get_variable_spec(grid.variable)

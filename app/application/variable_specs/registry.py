@@ -1,3 +1,5 @@
+from app.application.variable_specs.implementations.wind_direction_builder import WindDirectionBuilder
+from app.application.variable_specs.implementations.wind_speed_builder import WindSpeedBuilder
 from app.domain.entities import VariableSpec
 from app.application.variable_specs.implementations.temperature_builder import TemperatureBuilder
 from app.application.variable_specs.implementations.pressure_builder import PressureBuilder
@@ -10,6 +12,8 @@ _BUILDERS = {
     "temperature" : TemperatureBuilder,
     "pressure" : PressureBuilder,
     "precipitation": PrecipitationBuilder,
+    "wind_speed":    WindSpeedBuilder,
+    "wind_direction": WindDirectionBuilder,
 }
 
 

@@ -1,12 +1,6 @@
-"""
-WrfReaderAdapter — implements WrfDataReader for WRF output files.
-
-The virtual variable "PRECIPITATION" is resolved here as RAINC + RAINNC.
-Domain and application layers stay free of WRF-specific field names.
-"""
-
-import os
+from __future__ import annotations
 from pathlib import Path
+from typing import Protocol
 
 import numpy as np
 import xarray as xr
@@ -20,10 +14,65 @@ from .file_locator import WrfFileLocator
 
 _WRFOUT_PREFIX = "wrfout_d01_"
 
-# Virtual variables: logical name → WRF fields to sum
-_VIRTUAL_VARIABLES: dict[str, tuple[str, ...]] = {
-    "PRECIPITATION": ("RAINC", "RAINNC"),
+
+class VirtualVariableStrategy(Protocol):
+    def compute(self, ds: xr.Dataset, path: Path) -> np.ndarray: ...
+
+
+class SumFieldsStrategy:
+    def __init__(self, *fields: str) -> None:
+        self._fields = fields
+
+    def compute(self, ds: xr.Dataset, path: Path) -> np.ndarray:
+        present = [f for f in self._fields if f in ds]
+        if not present:
+            raise VariableNotFoundError(
+                f"None of {self._fields} found in '{path.name}'. "
+                f"Available: {list(ds.data_vars)}"
+            )
+        arrays = [_read_single(ds, f, path) for f in present]
+        return sum(arrays[1:], arrays[0])
+
+
+class WindSpeedStrategy:
+    """sqrt(U10² + V10²)"""
+    def __init__(self, u: str, v: str) -> None:
+        self._u = u
+        self._v = v
+
+    def compute(self, ds: xr.Dataset, path: Path) -> np.ndarray:
+        u = _read_single(ds, self._u, path)
+        v = _read_single(ds, self._v, path)
+        return np.sqrt(u ** 2 + v ** 2)
+
+
+class WindDirectionStrategy:
+    """Meteorological wind direction in degrees (0° = from North)"""
+    def __init__(self, u: str, v: str) -> None:
+        self._u = u
+        self._v = v
+
+    def compute(self, ds: xr.Dataset, path: Path) -> np.ndarray:
+        u = _read_single(ds, self._u, path)
+        v = _read_single(ds, self._v, path)
+        return (270 - np.degrees(np.arctan2(v, u))) % 360
+
+
+_VIRTUAL_VARIABLES: dict[str, VirtualVariableStrategy] = {
+    "PRECIPITATION":  SumFieldsStrategy("RAINC", "RAINNC"),
+    "WIND_SPEED":     WindSpeedStrategy("U10", "V10"),
+    "WIND_DIRECTION": WindDirectionStrategy("U10", "V10"),
 }
+
+
+def _read_single(ds: xr.Dataset, variable: str, path: Path) -> np.ndarray:
+    if variable not in ds:
+        raise VariableNotFoundError(
+            f"Variable '{variable}' not found in '{path.name}'. "
+            f"Available: {list(ds.data_vars)}"
+        )
+    values = ds[variable].values
+    return values[0] if values.ndim == 3 else values
 
 
 class WrfReaderAdapter(WrfDataReader):
@@ -33,66 +82,32 @@ class WrfReaderAdapter(WrfDataReader):
 
     def read_variable(self, wrf_variable: str, time: str | None) -> WeatherGrid:
         path = self._locator.resolve(time)
-        ds = self._load(path)
-        values = self._extract_values(ds, wrf_variable, path)
+        ds = WrfDatasetLoader(path).get()
+        values = self._resolve(ds, wrf_variable, path)
         lats, lons = coord_extractor.extract(ds)
         return WeatherGrid(
-            lats=lats,
-            lons=lons,
-            values=values,
+            lats=lats, lons=lons, values=values,
             variable=wrf_variable,
             time=time_parser.to_datetime(self._time_token(path)),
         )
 
     def get_meta(self) -> WrfMeta:
         files = self._locator.list_sorted()
-        lats, lons = coord_extractor.extract(self._load(files[-1]))
+        ds = WrfDatasetLoader(files[-1]).get()
+        lats, lons = coord_extractor.extract(ds)
         return WrfMeta(
-            bounds=(
-                (float(lats.min()), float(lons.min())),
-                (float(lats.max()), float(lons.max())),
-            ),
+            bounds=((float(lats.min()), float(lons.min())),
+                    (float(lats.max()), float(lons.max()))),
             available_times=[self._time_token(f) for f in files],
         )
-
-    # ------------------------------------------------------------------
-    # Private helpers
-    # ------------------------------------------------------------------
-
-    @staticmethod
-    def _load(path: Path) -> xr.Dataset:
-        return WrfDatasetLoader(path).get()
 
     @staticmethod
     def _time_token(path: Path) -> str:
         return path.name.removeprefix(_WRFOUT_PREFIX)
 
-    @classmethod
-    def _extract_values(cls, ds: xr.Dataset, variable: str, path: Path) -> np.ndarray:
-        components = _VIRTUAL_VARIABLES.get(variable.upper())
-        if components is not None:
-            return cls._sum_components(ds, components, path)
-        return cls._read_single(ds, variable, path)
-
     @staticmethod
-    def _read_single(ds: xr.Dataset, variable: str, path: Path) -> np.ndarray:
-        if variable not in ds:
-            raise VariableNotFoundError(
-                f"Variable '{variable}' not found in '{path.name}'. "
-                f"Available: {list(ds.data_vars)}"
-            )
-        values = ds[variable].values
-        return values[0] if values.ndim == 3 else values
-
-    @classmethod
-    def _sum_components(
-        cls, ds: xr.Dataset, components: tuple[str, ...], path: Path
-    ) -> np.ndarray:
-        present = [c for c in components if c in ds]
-        if not present:
-            raise VariableNotFoundError(
-                f"None of {components} found in '{path.name}'. "
-                f"Available: {list(ds.data_vars)}"
-            )
-        arrays = [cls._read_single(ds, c, path) for c in present]
-        return sum(arrays[1:], arrays[0])  # type: ignore[return-value]
+    def _resolve(ds: xr.Dataset, variable: str, path: Path) -> np.ndarray:
+        strategy = _VIRTUAL_VARIABLES.get(variable.upper())
+        if strategy is not None:
+            return strategy.compute(ds, path)
+        return _read_single(ds, variable, path)

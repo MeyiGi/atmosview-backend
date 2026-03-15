@@ -41,6 +41,8 @@ class Container:
         self.temperature_reader: WeatherDataReader = GribReaderAdapter(settings.TEMPERATURE_GRIB)
         self.pressure_reader: WeatherDataReader = GribReaderAdapter(settings.PRESSURE_GRIB)
         self.precipitation_reader: WeatherDataReader = GribReaderAdapter(settings.PRECIPITATION_GRIB)
+        self.wind_u_reader:       WeatherDataReader = GribReaderAdapter(settings.WIND_U_GRIB)
+        self.wind_v_reader:       WeatherDataReader = GribReaderAdapter(settings.WIND_V_GRIB)
 
         # WRF reader
         self.wrf_reader = WrfReaderAdapter(settings.WRF_DIR)
@@ -63,6 +65,8 @@ class Container:
             "temperature": self.temperature_reader,
             "pressure": self.pressure_reader,
             "precipitation" : self.precipitation_reader,
+            "wind_speed":    self.wind_u_reader,
+            "wind_direction":self.wind_u_reader,
         }
         reader = mapping.get(variable)
         if reader is None:

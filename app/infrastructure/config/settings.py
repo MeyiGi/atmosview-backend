@@ -34,6 +34,14 @@ class Settings(BaseSettings):
         db_path = self.DATA_DIR / self.SQLITE_FILENAME
         db_path.parent.mkdir(parents=True, exist_ok=True)
         return f"sqlite:///{db_path}"
+    
+    @property
+    def WIND_U_GRIB(self) -> Path:
+        return self.DATA_DIR / "wind_u.grib"
+
+    @property
+    def WIND_V_GRIB(self) -> Path:
+        return self.DATA_DIR / "wind_v.grib"
 
     REGION_LAT_MIN: float = 35.0
     REGION_LAT_MAX: float = 55.0

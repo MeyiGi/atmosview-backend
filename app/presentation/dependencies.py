@@ -53,3 +53,15 @@ def get_logs_use_case(
     log_repo: SqlAlchemyLogRepository = Depends(get_log_repo),
 ) -> GetRequestLogsUseCase:
     return GetRequestLogsUseCase(log_repo=log_repo)
+
+from app.application.use_cases import RenderWrfWindUseCase
+
+def render_wrf_wind_use_case(
+    container: Container = Depends(get_container),
+    log_repo: SqlAlchemyLogRepository = Depends(get_log_repo),
+) -> RenderWrfWindUseCase:
+    return RenderWrfWindUseCase(
+        wrf_reader=container.wrf_reader,
+        renderer=container.renderer,
+        log_repo=log_repo,
+    )

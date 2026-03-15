@@ -45,12 +45,12 @@ class WeatherDataReader(ABC):
 # ---------------------------------------------------------------------------
 
 
-class WeatherRenderer(ABC):
-    """Port for turning a WeatherGrid into a visual representation."""
+# class WeatherRenderer(ABC):
+#     """Port for turning a WeatherGrid into a visual representation."""
 
-    @abstractmethod
-    def render_png(self, grid: WeatherGrid) -> bytes:
-        """Return PNG-encoded bytes for the given grid."""
+#     @abstractmethod
+#     def render_png(self, grid: WeatherGrid) -> bytes:
+#         """Return PNG-encoded bytes for the given grid."""
 
 
 # ---------------------------------------------------------------------------
@@ -125,6 +125,14 @@ class DataCache(ABC):
 
 
 # ---------------------------------------------------------------------------
-# VariableSpec port
+# Render wind in
 # ---------------------------------------------------------------------------
 
+class WeatherRenderer(ABC):
+
+    @abstractmethod
+    def render_png(self, grid: WeatherGrid) -> bytes: ...
+
+    @abstractmethod
+    def render_wind_png(self, u_grid: WeatherGrid, v_grid: WeatherGrid) -> bytes:
+        """Render wind speed + direction arrows from U and V component grids."""
