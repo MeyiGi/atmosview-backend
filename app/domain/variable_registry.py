@@ -20,6 +20,11 @@ _REGISTRY: dict[str, VariableSpec] = {
         colormap="viridis",
         unit_label="Pressure (Pa)",
     ),
+    "precipitation": VariableSpec(
+        name="precipitation",
+        colormap="Blues",
+        unit_label="Precipitation (mm)",
+    ),
 }
 
 

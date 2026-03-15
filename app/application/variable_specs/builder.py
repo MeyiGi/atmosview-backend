@@ -22,8 +22,8 @@ class VariableSpecBuilder(ABC):
     def build_unit_label(self) -> None: ...
 
     def get_result(self) -> VariableSpec:
-        if None in (self._name, self.self._colormap, self._unit_label):
-            return ValueError("VariablySpec is not fully empty")
+        if None in (self._name, self._colormap, self._unit_label):
+            raise ValueError("VariableSpec is not fully built")
         
         spec = VariableSpec(
             name=self._name,

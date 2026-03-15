@@ -46,6 +46,9 @@ class MatplotlibRenderer(WeatherRenderer):
         if var_name in ("T2", "TEMP", "TC") or unit_label == "K":
             values = values - 273.15
             unit_label = "°C"
+        elif var_name in ("RAINC", "RAINNC", "PRECIPITATION"):
+            # WRF cumulative rain fields are already in mm — no conversion needed
+            unit_label = "mm"
 
         # Build 2-D coordinate grids if inputs are 1-D (GRIB path)
         if lats.ndim == 1 and lons.ndim == 1:

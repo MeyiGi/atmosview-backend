@@ -20,6 +20,10 @@ class Settings(BaseSettings):
     @property
     def PRESSURE_GRIB(self) -> Path:
         return self.DATA_DIR / "pressure.grib"
+    
+    @property
+    def PRECIPITATION_GRIB(self) -> Path:
+        return self.DATA_DIR / "precipitation.grib"
 
     WRF_DIR: Path = BASE_DIR / "data" / "wrf"
 

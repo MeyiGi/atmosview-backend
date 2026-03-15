@@ -40,6 +40,7 @@ class Container:
         # GRIB readers — open the dataset once and cache on the instance
         self.temperature_reader: WeatherDataReader = GribReaderAdapter(settings.TEMPERATURE_GRIB)
         self.pressure_reader: WeatherDataReader = GribReaderAdapter(settings.PRESSURE_GRIB)
+        self.precipitation_reader: WeatherDataReader = GribReaderAdapter(settings.PRECIPITATION_GRIB)
 
         # WRF reader
         self.wrf_reader = WrfReaderAdapter(settings.WRF_DIR)
@@ -61,6 +62,7 @@ class Container:
         mapping = {
             "temperature": self.temperature_reader,
             "pressure": self.pressure_reader,
+            "precipitation" : self.precipitation_reader,
         }
         reader = mapping.get(variable)
         if reader is None:

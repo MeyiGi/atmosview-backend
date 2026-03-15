@@ -24,6 +24,14 @@
         "documentation": {}
     },
     {
+        "label": "VariableSpecBuilder",
+        "importPath": "app.application.variable_specs.builder",
+        "description": "app.application.variable_specs.builder",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.builder",
+        "documentation": {}
+    },
+    {
         "label": "ABC",
         "importPath": "abc",
         "description": "abc",
@@ -216,6 +224,14 @@
         "documentation": {}
     },
     {
+        "label": "PrecipitationBuilder",
+        "importPath": "app.application.variable_specs.implementations.precipitation_builder",
+        "description": "app.application.variable_specs.implementations.precipitation_builder",
+        "isExtraImport": true,
+        "detail": "app.application.variable_specs.implementations.precipitation_builder",
+        "documentation": {}
+    },
+    {
         "label": "VariableNotFoundError",
         "importPath": "app.domain.exceptions",
         "description": "app.domain.exceptions",
@@ -325,6 +341,14 @@
         "description": "app.application.variable_specs.director",
         "isExtraImport": true,
         "detail": "app.application.variable_specs.director",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
         "documentation": {}
     },
     {
@@ -607,6 +631,14 @@
         "importPath": "numpy",
         "description": "numpy",
         "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
         "documentation": {}
     },
     {
@@ -1344,6 +1376,58 @@
         "documentation": {}
     },
     {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "Herbie",
+        "importPath": "herbie",
+        "description": "herbie",
+        "isExtraImport": true,
+        "detail": "herbie",
+        "documentation": {}
+    },
+    {
+        "label": "warnings",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "warnings",
+        "description": "warnings",
+        "detail": "warnings",
+        "documentation": {}
+    },
+    {
+        "label": "management",
+        "importPath": "django.core",
+        "description": "django.core",
+        "isExtraImport": true,
+        "detail": "django.core",
+        "documentation": {}
+    },
+    {
+        "label": "PrecipitationBuilder",
+        "kind": 6,
+        "importPath": "app.application.variable_specs.implementations.precipitation_builder",
+        "description": "app.application.variable_specs.implementations.precipitation_builder",
+        "peekOfCode": "class PrecipitationBuilder(VariableSpecBuilder):\n    def build_name(self) -> None:\n        self._name = \"precipitation\"\n    def build_colormap(self) -> None:\n        self._colormap = \"Blues\"\n    def build_unit_label(self) -> None:\n        self._unit_label = \"Precipitation (mm)\"",
+        "detail": "app.application.variable_specs.implementations.precipitation_builder",
+        "documentation": {}
+    },
+    {
         "label": "PressureBuilder",
         "kind": 6,
         "importPath": "app.application.variable_specs.implementations.pressure_builder",
@@ -1384,7 +1468,7 @@
         "kind": 2,
         "importPath": "app.application.variable_specs.registry",
         "description": "app.application.variable_specs.registry",
-        "peekOfCode": "def get_variable_spec(name: str) -> VariableSpec:\n    \"\"\"\"\"\"\n    builder_cls = _BUILDERS[name]\n    if builder_cls is None:\n        raise VariableNotFoundError(f\"Unknown variable '{name}'. Available: {list(_BUILDERS)}\")\n    builder = builder_cls()\n    director = VariableSpecDirector(builder)\n    return director.construct()",
+        "peekOfCode": "def get_variable_spec(name: str) -> VariableSpec:\n    \"\"\"\"\"\"\n    builder_cls = _BUILDERS.get(name)\n    if builder_cls is None:\n        raise VariableNotFoundError(f\"Unknown variable '{name}'. Available: {list(_BUILDERS)}\")\n    builder = builder_cls()\n    director = VariableSpecDirector(builder)\n    return director.construct()",
         "detail": "app.application.variable_specs.registry",
         "documentation": {}
     },
@@ -1393,7 +1477,7 @@
         "kind": 5,
         "importPath": "app.application.variable_specs.registry",
         "description": "app.application.variable_specs.registry",
-        "peekOfCode": "_BUILDERS = {\n    \"temperature\" : TemperatureBuilder,\n    \"pressure\" : PressureBuilder,\n}\ndef get_variable_spec(name: str) -> VariableSpec:\n    \"\"\"\"\"\"\n    builder_cls = _BUILDERS[name]\n    if builder_cls is None:\n        raise VariableNotFoundError(f\"Unknown variable '{name}'. Available: {list(_BUILDERS)}\")\n    builder = builder_cls()",
+        "peekOfCode": "_BUILDERS = {\n    \"temperature\" : TemperatureBuilder,\n    \"pressure\" : PressureBuilder,\n    \"precipitation\": PrecipitationBuilder,\n}\ndef get_variable_spec(name: str) -> VariableSpec:\n    \"\"\"\"\"\"\n    builder_cls = _BUILDERS.get(name)\n    if builder_cls is None:\n        raise VariableNotFoundError(f\"Unknown variable '{name}'. Available: {list(_BUILDERS)}\")",
         "detail": "app.application.variable_specs.registry",
         "documentation": {}
     },
@@ -1654,7 +1738,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.adapters.wrf_reader.adapter",
         "description": "app.infrastructure.adapters.wrf_reader.adapter",
-        "peekOfCode": "_WRFOUT_PREFIX = \"wrfout_d01_\"\nclass WrfReaderAdapter(WrfDataReader):\n    def __init__(self, wrf_dir: str) -> None:\n        self._locator = WrfFileLocator(wrf_dir)\n    def read_variable(self, wrf_variable: str, time: str | None) -> WeatherGrid:\n        path = self._locator.resolve(time)\n        ds = self._load(path)\n        values = self._extract_values(ds, wrf_variable, path)\n        lats, lons = coord_extractor.extract(ds)\n        return WeatherGrid(",
+        "peekOfCode": "_WRFOUT_PREFIX = \"wrfout_d01_\"\n# Virtual variables: logical name → WRF fields to sum\n_VIRTUAL_VARIABLES: dict[str, tuple[str, ...]] = {\n    \"PRECIPITATION\": (\"RAINC\", \"RAINNC\"),\n}\nclass WrfReaderAdapter(WrfDataReader):\n    def __init__(self, wrf_dir: str) -> None:\n        self._locator = WrfFileLocator(wrf_dir)\n    def read_variable(self, wrf_variable: str, time: str | None) -> WeatherGrid:\n        path = self._locator.resolve(time)",
         "detail": "app.infrastructure.adapters.wrf_reader.adapter",
         "documentation": {}
     },
@@ -1924,7 +2008,7 @@
         "kind": 2,
         "importPath": "app.presentation.routers.wrf",
         "description": "app.presentation.routers.wrf",
-        "peekOfCode": "def wrf_temperature(\n    time: str | None = Query(\n        None,\n        description=\"WRF time. Examples: 2026-03-12_120000 or 2026-03-12_12:00:00\",\n    ),\n    use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),\n) -> Response:\n    query = WrfRenderQuery(\n        wrf_variable=\"T2\",\n        display_name=\"Temperature\",",
+        "peekOfCode": "def wrf_temperature(\n    time: str | None = Query(None, description=_TIME_DESCRIPTION),\n    use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),\n) -> Response:\n    query = WrfRenderQuery(wrf_variable=\"T2\", display_name=\"Temperature\", unit_label=\"°C\", time=time)\n    return Response(content=use_case.execute(query), media_type=\"image/png\")\n@router.get(\n    \"/pressure\",\n    response_class=Response,\n    responses={200: {\"content\": {\"image/png\": {}}}, 404: {}, 500: {}},",
         "detail": "app.presentation.routers.wrf",
         "documentation": {}
     },
@@ -1933,7 +2017,16 @@
         "kind": 2,
         "importPath": "app.presentation.routers.wrf",
         "description": "app.presentation.routers.wrf",
-        "peekOfCode": "def wrf_pressure(\n    time: str | None = Query(None, description=\"WRF filename timestamp\"),\n    use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),\n) -> Response:\n    query = WrfRenderQuery(\n        wrf_variable=\"PSFC\",\n        display_name=\"Pressure\",\n        unit_label=\"hPa\",\n        time=time,\n    )",
+        "peekOfCode": "def wrf_pressure(\n    time: str | None = Query(None, description=_TIME_DESCRIPTION),\n    use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),\n) -> Response:\n    query = WrfRenderQuery(wrf_variable=\"PSFC\", display_name=\"Pressure\", unit_label=\"hPa\", time=time)\n    return Response(content=use_case.execute(query), media_type=\"image/png\")\n@router.get(\n    \"/precipitation\",\n    response_class=Response,\n    responses={200: {\"content\": {\"image/png\": {}}}, 404: {}, 500: {}},",
+        "detail": "app.presentation.routers.wrf",
+        "documentation": {}
+    },
+    {
+        "label": "wrf_precipitation",
+        "kind": 2,
+        "importPath": "app.presentation.routers.wrf",
+        "description": "app.presentation.routers.wrf",
+        "peekOfCode": "def wrf_precipitation(\n    time: str | None = Query(None, description=_TIME_DESCRIPTION),\n    use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),\n) -> Response:\n    query = WrfRenderQuery(wrf_variable=\"PRECIPITATION\", display_name=\"Precipitation\", unit_label=\"mm\", time=time)\n    return Response(content=use_case.execute(query), media_type=\"image/png\")\n@router.get(\n    \"/meta\",\n    summary=\"WRF domain metadata\",\n    description=\"Returns the spatial bounds and list of available output times.\",",
         "detail": "app.presentation.routers.wrf",
         "documentation": {}
     },
@@ -1951,7 +2044,16 @@
         "kind": 5,
         "importPath": "app.presentation.routers.wrf",
         "description": "app.presentation.routers.wrf",
-        "peekOfCode": "router = APIRouter(prefix=\"/wrf\", tags=[\"WRF\"])\n@router.get(\n    \"/temperature\",\n    response_class=Response,\n    responses={200: {\"content\": {\"image/png\": {}}}, 404: {}, 500: {}},\n    summary=\"WRF 2-metre temperature map\",\n)\ndef wrf_temperature(\n    time: str | None = Query(\n        None,",
+        "peekOfCode": "router = APIRouter(prefix=\"/wrf\", tags=[\"WRF\"])\n_TIME_DESCRIPTION = (\n    \"WRF filename timestamp. \"\n    \"Examples: 2026-03-12_120000 or 2026-03-12_12:00:00. \"\n    \"Omit to use the latest available file.\"\n)\n@router.get(\n    \"/temperature\",\n    response_class=Response,\n    responses={200: {\"content\": {\"image/png\": {}}}, 404: {}, 500: {}},",
+        "detail": "app.presentation.routers.wrf",
+        "documentation": {}
+    },
+    {
+        "label": "_TIME_DESCRIPTION",
+        "kind": 5,
+        "importPath": "app.presentation.routers.wrf",
+        "description": "app.presentation.routers.wrf",
+        "peekOfCode": "_TIME_DESCRIPTION = (\n    \"WRF filename timestamp. \"\n    \"Examples: 2026-03-12_120000 or 2026-03-12_12:00:00. \"\n    \"Omit to use the latest available file.\"\n)\n@router.get(\n    \"/temperature\",\n    response_class=Response,\n    responses={200: {\"content\": {\"image/png\": {}}}, 404: {}, 500: {}},\n    summary=\"WRF 2-metre temperature map\",",
         "detail": "app.presentation.routers.wrf",
         "documentation": {}
     },
@@ -2043,6 +2145,24 @@
         "description": "app.main",
         "peekOfCode": "app = create_app()",
         "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "GfsVariable",
+        "kind": 6,
+        "importPath": "scripts.download_gfs_data",
+        "description": "scripts.download_gfs_data",
+        "peekOfCode": "class GfsVariable:\n    search: str      # Herbie GRIB message search pattern (regex)\n    filename: str    # target filename under data/\nGFS_VARIABLES: list[GfsVariable] = [\n    # GfsVariable(search=\":TMP:2 m above ground:\",      filename=\"temperature.grib\"),\n    # GfsVariable(search=\":PRES:surface:\",              filename=\"pressure.grib\"),\n    GfsVariable(search=\":APCP:surface:0-6 hour acc fcst:\", filename=\"precipitation.grib\"),\n    # GfsVariable(search=\":UGRD:10 m above ground:\",    filename=\"wind_u.grib\"),\n    # GfsVariable(search=\":VGRD:10 m above ground:\",    filename=\"wind_v.grib\"),\n    # GfsVariable(search=\":HGT:500 mb:\",                filename=\"geopotential_500.grib\"),",
+        "detail": "scripts.download_gfs_data",
+        "documentation": {}
+    },
+    {
+        "label": "download_all",
+        "kind": 2,
+        "importPath": "scripts.download_gfs_data",
+        "description": "scripts.download_gfs_data",
+        "peekOfCode": "def download_all(date: str, data_dir: Path) -> None:\n    data_dir.mkdir(parents=True, exist_ok=True)\n    tmp_dir = data_dir / \"_gfs_tmp\"\n    print(f\"Downloading GFS data for {date}\\n\")\n    for var in GFS_VARIABLES:\n        dest = data_dir / var.filename\n        print(f\"  {var.search:<40} → {dest.name} ...\", end=\" \", flush=True)\n        h = _get_herbie(date, var.search)\n        if h is None:\n            print(\"NOT FOUND in any fxx — skipped\")",
+        "detail": "scripts.download_gfs_data",
         "documentation": {}
     }
 ]
