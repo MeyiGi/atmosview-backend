@@ -9,7 +9,7 @@ class VirtualVariableStrategy(Protocol):
     def compute(self, ds: xr.Dataset, path: Path) -> np.ndarray: ...
 
 
-_REGISTRY: dict[str: VirtualVariableStrategy] = {}
+_REGISTRY: dict[str, VirtualVariableStrategy] = {}
 
 
 def register_strategy(name: str) -> Callable[[Type], Type]:

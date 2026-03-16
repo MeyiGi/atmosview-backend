@@ -18,9 +18,9 @@ import numpy as np
 
 from app.domain.entities import WeatherGrid
 from app.domain.interfaces import WeatherRenderer
-from app.domain.variable_registry import get_variable_spec
 from app.domain.exceptions import VariableNotFoundError
 from app.infrastructure.config.settings import get_settings
+from app.application.variable_specs.registry import get_variable_spec
 
 
 class MatplotlibRenderer(WeatherRenderer):

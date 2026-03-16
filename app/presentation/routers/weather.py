@@ -13,7 +13,7 @@ from fastapi.responses import Response
 
 from app.application.dtos import RenderMapQuery
 from app.application.use_cases import RenderWeatherMapUseCase
-from app.domain.variable_registry import all_variable_names
+from app.application.variable_specs.registry import all_variable_names
 from app.infrastructure.persistence.database import get_db_session
 from app.infrastructure.persistence.repositories.log_repository import SqlAlchemyLogRepository
 from app.presentation.schemas import WeatherMapRequest

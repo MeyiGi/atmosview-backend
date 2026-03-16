@@ -9,5 +9,5 @@ from app.infrastructure.adapters.wrf_reader.helpers import read_single
 @register_strategy("TEMPERATURE")
 class TemperatureStrategy(VirtualVariableStrategy):
     """2-metre air temperature in Kelvin (T2)."""
-    def compute(ds: xr.Dataset, path: Path) -> np.ndarray:
+    def compute(self, ds: xr.Dataset, path: Path) -> np.ndarray:
         return read_single(ds, "T2", path)

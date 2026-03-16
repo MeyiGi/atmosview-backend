@@ -1,14 +1,15 @@
+from app.application.variable_specs.builder import VariableSpecBuilder
 from app.application.variable_specs.implementations.wind_direction_builder import WindDirectionBuilder
 from app.application.variable_specs.implementations.wind_speed_builder import WindSpeedBuilder
-from app.domain.entities import VariableSpec
 from app.application.variable_specs.implementations.temperature_builder import TemperatureBuilder
 from app.application.variable_specs.implementations.pressure_builder import PressureBuilder
 from app.application.variable_specs.implementations.precipitation_builder import PrecipitationBuilder
-from app.domain.exceptions import VariableNotFoundError
 from app.application.variable_specs.director import VariableSpecDirector
+from app.domain.exceptions import VariableNotFoundError
+from app.domain.entities import VariableSpec
 
 
-_BUILDERS = {
+_BUILDERS: dict[str, type[VariableSpecBuilder]] = {
     "temperature" : TemperatureBuilder,
     "pressure" : PressureBuilder,
     "precipitation": PrecipitationBuilder,
@@ -18,7 +19,6 @@ _BUILDERS = {
 
 
 def get_variable_spec(name: str) -> VariableSpec:
-    """"""
     builder_cls = _BUILDERS.get(name)
     
     if builder_cls is None:
@@ -28,3 +28,6 @@ def get_variable_spec(name: str) -> VariableSpec:
     director = VariableSpecDirector(builder)
 
     return director.construct()
+
+def all_variable_names() -> list[str]:
+    return list(_BUILDERS)

@@ -15,11 +15,12 @@ from app.application.use_cases import (
     GetWrfMetaUseCase,
     RenderWrfMapUseCase,
 )
+from app.application.use_cases import RenderWrfWindUseCase
+
 from app.infrastructure.container import Container
 from app.infrastructure.persistence.database import get_db_session
-from app.infrastructure.persistence.repositories.log_repository import (
-    SqlAlchemyLogRepository,
-)
+from app.infrastructure.persistence.repositories.log_repository import SqlAlchemyLogRepository
+
 
 
 def get_container(request: Request) -> Container:
@@ -54,7 +55,6 @@ def get_logs_use_case(
 ) -> GetRequestLogsUseCase:
     return GetRequestLogsUseCase(log_repo=log_repo)
 
-from app.application.use_cases import RenderWrfWindUseCase
 
 def render_wrf_wind_use_case(
     container: Container = Depends(get_container),

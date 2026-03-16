@@ -22,7 +22,7 @@ from app.domain.interfaces import (
     WeatherRenderer,
     WrfDataReader,
 )
-from app.domain.variable_registry import get_variable_spec
+from app.application.variable_specs.registry import get_variable_spec
 
 logger = logging.getLogger(__name__)
 
