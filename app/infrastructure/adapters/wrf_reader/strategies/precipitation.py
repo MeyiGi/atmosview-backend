@@ -5,7 +5,7 @@ import numpy as np
 
 from app.domain.exceptions import VariableNotFoundError
 from app.infrastructure.adapters.wrf_reader.helpers import read_single
-from app.infrastructure.adapters.wrf_reader.variable_registry import register_strategy
+from app.infrastructure.adapters.wrf_reader.registry import register_strategy
 
 from .base import VirtualVariableStrategy
 

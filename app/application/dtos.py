@@ -11,7 +11,7 @@ from datetime import datetime
 @dataclass(frozen=True)
 class RenderWindQuery:
     """Input for the combined wind map use case."""
-    time: str | None  # WRF timestamp or None → latest
+    time: str | None
 
 @dataclass(frozen=True)
 class RenderMapQuery:
@@ -23,12 +23,9 @@ class RenderMapQuery:
 
 @dataclass(frozen=True)
 class WrfRenderQuery:
-    """Input for the 'render WRF map' use case."""
-
-    wrf_variable: str   # raw WRF field name, e.g. "T2", "PSFC"
-    display_name: str   # human-readable name shown in the plot title
-    unit_label: str     # colour-bar label
-    time: str | None    # WRF filename timestamp or None → latest
+    metric: str
+    wrf_variable: str
+    time: str | None
 
 
 @dataclass(frozen=True)

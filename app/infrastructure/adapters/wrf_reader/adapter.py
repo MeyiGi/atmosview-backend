@@ -11,7 +11,7 @@ from app.infrastructure.adapters.dataset_loader.wrf import WrfDatasetLoader
 from . import coord_extractor, time_parser
 from .file_locator import WrfFileLocator
 from .helpers import read_single
-from .variable_registry import get_strategy
+from .registry import get_strategy
  
 
 _WRFOUT_PREFIX = "wrfout_d01_"

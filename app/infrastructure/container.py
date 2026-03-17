@@ -16,7 +16,7 @@ dependency-injector or punq without touching any other layer.
 from app.domain.entities import BoundingBox
 from app.domain.interfaces import DataCache, WeatherDataReader, WeatherRenderer
 from app.infrastructure.adapters.grib_reader import GribReaderAdapter
-from app.infrastructure.adapters.matplotlib_renderer import MatplotlibRenderer
+from app.infrastructure.adapters.rendering import MatplotlibRenderer
 from app.infrastructure.adapters.wrf_reader import WrfReaderAdapter
 from app.infrastructure.cache.in_memory_cache import InMemoryLRUCache
 from app.infrastructure.config.settings import Settings, get_settings

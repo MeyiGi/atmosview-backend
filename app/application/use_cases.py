@@ -14,7 +14,7 @@ import logging
 from datetime import datetime
 
 from app.application.dtos import RenderMapQuery, RenderWindQuery, RequestLogEntry, WrfRenderQuery
-from app.domain.entities import BoundingBox, VariableSpec
+from app.domain.entities import BoundingBox, RenderRequest, VariableSpec
 from app.domain.interfaces import (
     DataCache,
     RequestLogRepository,
@@ -27,10 +27,7 @@ from app.application.variable_specs.registry import get_variable_spec
 logger = logging.getLogger(__name__)
 
 
-
-# ---------------------------------------------------------------------------
 # Helpers
-# ---------------------------------------------------------------------------
 
 
 def _cache_key(variable: str, time: datetime) -> str:
@@ -52,9 +49,7 @@ def _safe_log(
         logger.exception("Failed to write request log for %s", endpoint)
 
 
-# ---------------------------------------------------------------------------
 # Use case: render a GRIB-backed weather variable map
-# ---------------------------------------------------------------------------
 
 
 class RenderWeatherMapUseCase:
@@ -85,7 +80,7 @@ class RenderWeatherMapUseCase:
         self._bbox = bbox
 
     def execute(self, query: RenderMapQuery) -> bytes:
-        spec: VariableSpec = get_variable_spec(query.variable)  # raises VariableNotFoundError
+        spec: VariableSpec = get_variable_spec(query.variable)
         time_str = query.time.isoformat()
         cache_key = _cache_key(spec.name, query.time)
 
@@ -95,16 +90,15 @@ class RenderWeatherMapUseCase:
             return cached
 
         grid = self._reader.read(spec.name, query.time, self._bbox)
-        png = self._renderer.render_png(grid)
-
+        png = self._renderer.render(
+            RenderRequest(metric=query.variable, grids={"main": grid})
+        )
         self._cache.set(cache_key, png)
         _safe_log(self._log_repo, f"/{spec.name}", time_str, "success")
         return png
 
 
-# ---------------------------------------------------------------------------
 # Use case: render a WRF variable map
-# ---------------------------------------------------------------------------
 
 
 class RenderWrfMapUseCase:
@@ -126,20 +120,18 @@ class RenderWrfMapUseCase:
         self._log_repo = log_repo
 
     def execute(self, query: WrfRenderQuery) -> bytes:
-        endpoint = f"/wrf/{query.display_name.lower()}"
+        endpoint = f"/wrf/{query.metric}"
         time_str = query.time or "latest"
 
         grid = self._wrf_reader.read_variable(query.wrf_variable, query.time)
-        # Override spec labels from the query so the renderer can use them
-        png = self._renderer.render_png(grid)
-
+        png = self._renderer.render(
+            RenderRequest(metric=query.metric, grids={"main": grid})
+        )
         _safe_log(self._log_repo, endpoint, time_str, "success")
         return png
 
 
-# ---------------------------------------------------------------------------
 # Use case: retrieve WRF domain metadata
-# ---------------------------------------------------------------------------
 
 
 class GetWrfMetaUseCase:
@@ -154,9 +146,7 @@ class GetWrfMetaUseCase:
         }
 
 
-# ---------------------------------------------------------------------------
 # Use case: fetch request logs
-# ---------------------------------------------------------------------------
 
 
 class GetRequestLogsUseCase:
@@ -167,9 +157,7 @@ class GetRequestLogsUseCase:
         rows = self._log_repo.get_recent(limit)
         return [RequestLogEntry(**row) for row in rows]
 
-# ---------------------------------------------------------------------------
 # Use case: show wind information
-# ---------------------------------------------------------------------------
 
 class RenderWrfWindUseCase:
     """
@@ -191,6 +179,8 @@ class RenderWrfWindUseCase:
     def execute(self, query: RenderWindQuery) -> bytes:
         u_grid = self._wrf_reader.read_variable("U10", query.time)
         v_grid = self._wrf_reader.read_variable("V10", query.time)
-        png = self._renderer.render_wind_png(u_grid, v_grid)
+        png = self._renderer.render(
+            RenderRequest(metric="wind", grids={"u": u_grid, "v": v_grid})
+        )
         _safe_log(self._log_repo, "/wrf/wind", query.time or "latest", "success")
         return png

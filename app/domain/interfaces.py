@@ -10,7 +10,7 @@ from abc import ABC, abstractmethod
 from datetime import datetime
 
 from app.domain.entities import BoundingBox, WeatherGrid, WrfMeta
-from .entities import VariableSpec
+from .entities import RenderRequest, VariableSpec
 
 
 # ---------------------------------------------------------------------------
@@ -129,10 +129,5 @@ class DataCache(ABC):
 # ---------------------------------------------------------------------------
 
 class WeatherRenderer(ABC):
-
     @abstractmethod
-    def render_png(self, grid: WeatherGrid) -> bytes: ...
-
-    @abstractmethod
-    def render_wind_png(self, u_grid: WeatherGrid, v_grid: WeatherGrid) -> bytes:
-        """Render wind speed + direction arrows from U and V component grids."""
+    def render(self, request: RenderRequest) -> bytes: ...

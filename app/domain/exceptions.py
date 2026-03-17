@@ -21,3 +21,6 @@ class TimeNotFoundError(DomainError):
 
 class VariableNotFoundError(DomainError):
     """Raised when the requested variable does not exist in the dataset."""
+
+class UnsupportedRenderMetricError(Exception):
+    """Raised when a requested render metric is not supported by the system."""

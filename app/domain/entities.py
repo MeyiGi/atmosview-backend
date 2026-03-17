@@ -7,6 +7,7 @@ These are plain dataclasses — no ORM, no Pydantic, no framework.
 
 from dataclasses import dataclass
 from datetime import datetime
+from typing import Mapping
 
 import numpy as np
 
@@ -67,3 +68,9 @@ class WrfMeta:
 
     bounds: tuple[tuple[float, float], tuple[float, float]]  # [[S,W],[N,E]]
     available_times: list[str]
+
+
+@dataclass(frozen=False)
+class RenderRequest:
+    metric: str
+    grids: Mapping[str, WeatherGrid]
