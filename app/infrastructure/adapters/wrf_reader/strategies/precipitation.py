@@ -3,9 +3,11 @@ from pathlib import Path
 import xarray as xr
 import numpy as np
 
-from app.infrastructure.adapters.wrf_reader.variable_registry import register_strategy, VirtualVariableStrategy
 from app.domain.exceptions import VariableNotFoundError
 from app.infrastructure.adapters.wrf_reader.helpers import read_single
+from app.infrastructure.adapters.wrf_reader.variable_registry import register_strategy
+
+from .base import VirtualVariableStrategy
 
 @register_strategy("PRECIPITATION")
 class PrecipitationStrategy(VirtualVariableStrategy):

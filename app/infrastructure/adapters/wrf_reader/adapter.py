@@ -5,8 +5,9 @@ import xarray as xr
  
 from app.domain.entities import WeatherGrid, WrfMeta
 from app.domain.interfaces import WrfDataReader
-from app.infrastructure.adapters.dataset_loader import WrfDatasetLoader
 
+from app.infrastructure.adapters.dataset_loader.base import DatasetLoader
+from app.infrastructure.adapters.dataset_loader.wrf import WrfDatasetLoader
 from . import coord_extractor, time_parser
 from .file_locator import WrfFileLocator
 from .helpers import read_single

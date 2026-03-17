@@ -1,13 +1,6 @@
-from pathlib import Path
-from typing import Callable, Protocol, Type
+from typing import Callable, Type
 
-import numpy as np
-import xarray as xr
-
-class VirtualVariableStrategy(Protocol):
-    """Strategy interface for reading WRF files"""
-    def compute(self, ds: xr.Dataset, path: Path) -> np.ndarray: ...
-
+from app.infrastructure.adapters.wrf_reader.strategies.base import VirtualVariableStrategy
 
 _REGISTRY: dict[str, VirtualVariableStrategy] = {}
 

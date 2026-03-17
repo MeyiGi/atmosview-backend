@@ -4,8 +4,10 @@ from pathlib import Path
 import xarray as xr
 from app.domain.exceptions import DataSourceError
 from app.domain.interfaces import WeatherDataReader
-from app.infrastructure.adapters.dataset_loader import DatasetLoader, GridDatasetLoader
+
 from app.domain.entities import BoundingBox, WeatherGrid
+from app.infrastructure.adapters.dataset_loader.base import DatasetLoader
+from app.infrastructure.adapters.dataset_loader.grib import GridDatasetLoader
 
 from . import bbox_clipper, time_selector
 
