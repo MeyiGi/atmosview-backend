@@ -31,7 +31,7 @@ def wrf_temperature(
     time: str | None = Query(None, description=_TIME_DESCRIPTION),
     use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),
 ) -> Response:
-    query = WrfRenderQuery(wrf_variable="T2", display_name="Temperature", unit_label="°C", time=time)
+    query = WrfRenderQuery(metric="temperature", wrf_variable="T2", time=time)
     return Response(content=use_case.execute(query), media_type="image/png")
 
 
@@ -45,7 +45,7 @@ def wrf_pressure(
     time: str | None = Query(None, description=_TIME_DESCRIPTION),
     use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),
 ) -> Response:
-    query = WrfRenderQuery(wrf_variable="PSFC", display_name="Pressure", unit_label="hPa", time=time)
+    query = WrfRenderQuery(metric="pressure", wrf_variable="PSFC", time=time)
     return Response(content=use_case.execute(query), media_type="image/png")
 
 
@@ -63,7 +63,7 @@ def wrf_precipitation(
     time: str | None = Query(None, description=_TIME_DESCRIPTION),
     use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),
 ) -> Response:
-    query = WrfRenderQuery(wrf_variable="PRECIPITATION", display_name="Precipitation", unit_label="mm", time=time)
+    query = WrfRenderQuery(metric="precipitation", wrf_variable="PRECIPITATION", time=time)
     return Response(content=use_case.execute(query), media_type="image/png")
 
 @router.get(
@@ -78,6 +78,20 @@ def wrf_wind(
     use_case: RenderWrfWindUseCase = Depends(render_wrf_wind_use_case),
 ) -> Response:
     return Response(content=use_case.execute(RenderWindQuery(time=time)), media_type="image/png")
+
+@router.get(
+    "/humidity",
+    response_class=Response,
+    responses={200: {"content": {"image/png": {}}}, 404: {}, 500: {}},
+    summary="WRF 2-metre specific humidity map",
+    description="Returns a PNG map of 2-metre specific humidity (Q2) in kg/kg from WRF model output.",
+)
+def wrf_humidity(
+    time: str | None = Query(None, description=_TIME_DESCRIPTION),
+    use_case: RenderWrfMapUseCase = Depends(render_wrf_map_use_case),
+) -> Response:
+    query = WrfRenderQuery(metric="humidity", wrf_variable="HUMIDITY", time=time)
+    return Response(content=use_case.execute(query), media_type="image/png")
 
 @router.get(
     "/meta",

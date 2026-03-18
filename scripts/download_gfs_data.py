@@ -34,10 +34,10 @@ GFS_VARIABLES: list[GfsVariable] = [
     # GfsVariable(search=":TMP:2 m above ground:",      filename="temperature.grib"),
     # GfsVariable(search=":PRES:surface:",              filename="pressure.grib"),
     # GfsVariable(search=":APCP:surface:0-6 hour acc fcst:", filename="precipitation.grib"),
-    GfsVariable(search=":UGRD:10 m above ground:",         filename="wind_u.grib"),
-    GfsVariable(search=":VGRD:10 m above ground:",         filename="wind_v.grib"),
+    # GfsVariable(search=":UGRD:10 m above ground:",         filename="wind_u.grib"),
+    # GfsVariable(search=":VGRD:10 m above ground:",         filename="wind_v.grib"),
     # GfsVariable(search=":HGT:500 mb:",                filename="geopotential_500.grib"),
-    # GfsVariable(search=":RH:2 m above ground:",       filename="humidity.grib"),
+    GfsVariable(search=":RH:2 m above ground:",       filename="humidity.grib"),
 ]
 
 

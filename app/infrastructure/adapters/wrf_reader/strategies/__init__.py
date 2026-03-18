@@ -17,4 +17,4 @@ def register_all_strategies() -> None:
     from . import wind_direction
     from . import temperature
     from . import pressure
-    
+    from . import humidity

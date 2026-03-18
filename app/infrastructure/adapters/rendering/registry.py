@@ -31,6 +31,13 @@ _RENDERER = {
         )
     ),
     "wind": WindStrategy(),
+    "humidity": ScalarMetricStrategy(
+        ScalarRenderSpec(
+            title="Specific Humidity",
+            unit_label="kg/kg",
+            cmap="YlGnBu",
+        )
+    ),
 }
 
 def get_render_strategy(metric: str) -> RenderStrategy:

@@ -24,6 +24,10 @@ class Settings(BaseSettings):
     @property
     def PRECIPITATION_GRIB(self) -> Path:
         return self.DATA_DIR / "precipitation.grib"
+    
+    @property
+    def HUMIDITY_GRIB(self) -> Path:
+        return self.DATA_DIR / "humidity.grib"
 
     WRF_DIR: Path = BASE_DIR / "data" / "wrf"
 

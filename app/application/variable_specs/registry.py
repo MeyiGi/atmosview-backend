@@ -1,4 +1,5 @@
 from app.application.variable_specs.builder import VariableSpecBuilder
+from app.application.variable_specs.implementations.humidity import HumidityBuilder
 from app.application.variable_specs.implementations.wind_direction_builder import WindDirectionBuilder
 from app.application.variable_specs.implementations.wind_speed_builder import WindSpeedBuilder
 from app.application.variable_specs.implementations.temperature_builder import TemperatureBuilder
@@ -15,6 +16,7 @@ _BUILDERS: dict[str, type[VariableSpecBuilder]] = {
     "precipitation": PrecipitationBuilder,
     "wind_speed":    WindSpeedBuilder,
     "wind_direction": WindDirectionBuilder,
+    "humidity":       HumidityBuilder,
 }
 
 
