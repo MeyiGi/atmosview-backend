@@ -22,7 +22,7 @@ from app.infrastructure.container import build_container
 from app.infrastructure.persistence.database import get_engine
 from app.infrastructure.persistence.models.request_log import Base
 from app.presentation.exception_handlers import register_exception_handlers
-from app.presentation.routers import logs, weather, wrf
+from app.presentation.routers import logs, weather, weather_grid, wrf, wrf_grid
 
 logging.basicConfig(
     level=get_settings().LOG_LEVEL,
@@ -65,6 +65,8 @@ def create_app() -> FastAPI:
     app.include_router(weather.router)
     app.include_router(wrf.router)
     app.include_router(logs.router)
+    app.include_router(weather_grid.router)
+    app.include_router(wrf_grid.router)
 
     return app
 
